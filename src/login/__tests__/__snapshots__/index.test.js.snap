@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Login Page 1`] = `
+<div
+  class="ui center aligned middle aligned grid"
+  style="height: 100vh;"
+>
+  <div
+    class="column"
+    style="max-width: 450px;"
+  >
+    <h2
+      class="ui teal center aligned header"
+    >
+      <i
+        aria-hidden="true"
+        class="user circle icon"
+      />
+      Log-in to your account
+    </h2>
+    <form
+      class="ui large form"
+    >
+      <div
+        class="ui stacked segment"
+      >
+        <div
+          class="field"
+        >
+          <div
+            class="ui fluid left icon input"
+          >
+            <input
+              placeholder="Username"
+              type="text"
+              value=""
+            />
+            <i
+              aria-hidden="true"
+              class="user icon"
+            />
+          </div>
+        </div>
+        <div
+          class="field"
+        >
+          <div
+            class="ui fluid left icon input"
+          >
+            <input
+              placeholder="Password"
+              type="password"
+              value=""
+            />
+            <i
+              aria-hidden="true"
+              class="lock icon"
+            />
+          </div>
+        </div>
+        <button
+          class="ui teal large fluid button"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
