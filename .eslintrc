@@ -1,0 +1,111 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:testing-library/react",
+    "plugin:jest/recommended"
+  ],
+  "plugins": [
+    "react",
+    "import",
+    "react-hooks",
+    "testing-library"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react/jsx-curly-newline": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/jsx-one-expression-per-line": [
+      "warn",
+      {
+        "allow": "single-child"
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "allowArrowFunctions": true,
+        "allowFunctions": true,
+        "allowBind": false,
+        "ignoreRefs": true
+      }
+    ],
+    "react/destructuring-assignment": "off",
+    "react/function-component-definition": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "import/no-extraneous-dependencies": "off",
+    "class-methods-use-this": "off",
+    "camelcase": "warn",
+    "newline-per-chained-call": [
+      "error",
+      {
+        "ignoreChainWithDepth": 3
+      }
+    ],
+    "no-unused-expressions": [
+      "warn",
+      {
+        "allowShortCircuit": true
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "none"
+      }
+    ],
+    "no-use-before-define": "off",
+    "no-alert": "warn",
+    "no-param-reassign": [
+      "error",
+      {
+        "ignorePropertyModificationsFor": [
+          "draft"
+        ]
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectPattern": {
+          "multiline": true,
+          "minProperties": 5
+        },
+        "ImportDeclaration": {
+          "multiline": true,
+          "minProperties": 5
+        },
+        "ExportDeclaration": {
+          "multiline": true,
+          "minProperties": 5
+        }
+      }
+    ],
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "testing-library/no-manual-cleanup": "error",
+    "testing-library/no-node-access": "warn",
+    "testing-library/prefer-screen-queries": "off"
+  }
+}
