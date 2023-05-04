@@ -9,7 +9,7 @@ import {
   Segment,
 } from 'semantic-ui-react';
 
-const LoginPage = () => {
+const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -73,4 +73,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default LoginForm;

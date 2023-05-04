@@ -1,29 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
-import LoginForm from './components/LoginForm';
-import Root from './Root';
+import App from './Root';
 import reportWebVitals from './reportWebVitals';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <LoginForm />,
-  },
-  {
-    path: '/root',
-    element: <Root />,
-  },
-]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-);
+root.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
