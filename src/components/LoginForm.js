@@ -19,11 +19,13 @@ const LoginPage = () => {
     setError('');
     setLoading(true);
 
-    // Perform login request here
-    if (password !== 'qwe123') {
-      setError('password error!');
+    if (password === 'qwe123') {
+      window.location.href = '/root';
+
+      return;
     }
 
+    setError('password error!');
     setLoading(false);
   }
 

@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
-import App from './App';
+import LoginForm from './components/LoginForm';
+import Root from './Root';
 import reportWebVitals from './reportWebVitals';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <LoginForm />,
+  },
+  {
+    path: '/root',
+    element: <Root />,
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
 
