@@ -1,12 +1,18 @@
-const sidebars = [
+import React from 'react';
+import Home from '../components/Home';
+import LoginForm from '../components/LoginForm';
+
+const Sidebars = [
   {
-    href: '/root',
+    path: '/home',
     content: 'Home',
+    element: <Home />,
   },
   {
-    href: '/',
+    path: '/',
     content: 'Log out',
+    element: <LoginForm />,
   },
 ];
 
-export default sidebars;
+export default Sidebars;

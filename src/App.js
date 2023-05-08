@@ -6,23 +6,11 @@ import {
   Sidebar,
   Icon,
 } from 'semantic-ui-react';
-import LoginForm from './components/LoginForm';
 import SidebarsMap from './constants/SidebarsMap';
-import initPagination from './constants/InitPagination';
-import Pagination from './utils/Pagination';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <LoginForm />,
-  },
-  {
-    path: '/root',
-    element: <Pagination pagination={initPagination} onPageChanged={null} />,
-  },
-]);
+const router = createBrowserRouter(SidebarsMap);
 
-const RootHeader = ({ visible, setVisible }) => {
+const AppHeader = ({ visible, setVisible }) => {
   const { pathname } = window.location;
 
   return (
@@ -41,7 +29,7 @@ const RootHeader = ({ visible, setVisible }) => {
   );
 };
 
-const RootSidebar = ({ visible }) => (
+const AppSidebar = ({ visible }) => (
   <Sidebar
     as={Menu}
     animation="overlay"
@@ -54,20 +42,20 @@ const RootSidebar = ({ visible }) => (
       <Menu.Item
         as="a"
         key={sidebar.content}
-        href={sidebar.href}
+        href={sidebar.path}
         content={sidebar.content}
       />
     ))}
   </Sidebar>
 );
 
-const Root = () => {
+const App = () => {
   const [visible, setVisible] = useState(false);
 
   return (
     <React.StrictMode>
-      <RootHeader visible={visible} setVisible={setVisible} />
-      <RootSidebar visible={visible} />
+      <AppHeader visible={visible} setVisible={setVisible} />
+      <AppSidebar visible={visible} />
       <Container style={{ marginTop: '7em' }}>
         <RouterProvider router={router} />
       </Container>
@@ -75,4 +63,4 @@ const Root = () => {
   );
 };
 
-export default Root;
+export default App;

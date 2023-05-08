@@ -20,7 +20,7 @@ const LoginForm = () => {
     setLoading(true);
 
     if (password === 'qwe123') {
-      window.location.href = '/root';
+      window.location.href = '/home';
 
       return;
     }
