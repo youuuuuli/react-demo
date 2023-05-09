@@ -1,0 +1,231 @@
+/*******************************
+            Modal
+*******************************/
+.ui.modal {
+  animation: fadeShow 0.5s ease;
+}
+
+.ui.modal .content.height-auto {
+  height: auto;
+}
+
+/* 百寶箱視窗 */
+.ui.modal.modal-slide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 20%;
+  height: 100%;
+  border-radius: 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.modals.dimmer .ui.scrolling.modal.modal-slide {
+  margin: 0;
+}
+
+.ui.modal.fullscreen.modal-slide {
+  left: 5% !important;
+  margin: 0;
+}
+
+.ui.modal.modal-slide .scrolling.content {
+  padding: 20px;
+  max-height: calc(90vh);
+  height: calc(100vh - 120px);
+}
+
+.ui.modal.modal-slide .content .ui.form .fields .field > .ui.input,
+.ui.modal.modal-slide .content .ui.form .fields .field > label + span {
+  line-height: 36px;
+}
+
+.ui.modal.modal-slide > div:last-child:not(.actions) {
+  min-height: calc(100vh - 53px);
+  height: auto;
+}
+
+.ui.modal.modal-slide > .actions {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* 面板收合按鈕 */
+.ui.block.attached.header > i.icon.angle {
+  float: right;
+}
+
+/* 面板提示資訊 */
+.ui.block.attached.header > i.icon.info {
+  font-size: inherit;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+@keyframes fadeShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(75px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ui.large.modal.modal-slide {
+    margin: 0;
+    width: 80%;
+  }
+  .ui.small.modal.modal-slide {
+    margin: 0;
+    width: 60%;
+    left: 40%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .ui.large.modal.modal-slide {
+    margin: 0;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ui.large.modal.modal-slide {
+    margin: 0;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 467px) {
+  .ui.modals.dimmer {
+    padding: 0 !important;
+  }
+
+  .ui.modal.transition {
+    width: 100% !important;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.ui.modal:not(.modal-slide) .ui.form.with-label .fields:not(.inline) {
+  align-items: flex-end;
+}
+
+/* 標題與欄位 */
+.ui.modal.modal-slide .ui.attached.segment h5.ui.header ~ .field,
+.ui.modal.modal-slide .ui.attached.segment h5.ui.header ~ .fields {
+  padding-left: 8px;
+}
+
+.ui.modal .label-with-checkbox label {
+  float: left;
+}
+.ui.modal .label-with-checkbox .ui.checkbox {
+  float: right;
+  font-weight: 700;
+}
+
+/* 自動回收餘額 - 外接平台無法回收金額細項標題 */
+.ui.modal.modal-slide.tiny-slide .header {
+  padding: 15px 50px 15px 24px;
+}
+
+/* 副標題文字 */
+.ui.modal .header span.subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 1.5em;
+}
+
+/* 鎖定清單彈窗 */
+.ui.modal[name="levelLockedModal"] .content {
+  padding-bottom: 24px;
+}
+
+/* 單一解鎖/鎖定 */
+.ui.modal button.levelLocked {
+  background: #f2f3f7;
+  font-weight: 400;
+  margin: 0.15em;
+}
+
+.ui.modal button.levelLocked:focus {
+  background: #f2f3f7;
+  box-shadow: inset 0 0 0 1px #e8e8e8 !important;
+}
+
+/* 單一解鎖/鎖定 */
+.ui.modal button.basic.levelLocked:hover {
+  background: none !important;
+  box-shadow: inset 0 0 0 1px #e8e8e8 !important;
+}
+
+.ui.modal button.basic.levelLocked:focus {
+  background: none !important;
+}
+
+/* 當頁解鎖/鎖定 */
+.ui.modal button.allLevelLocked:focus {
+  background: none !important;
+}
+
+/* 鎖定樣式 */
+i.icon.unlocked,
+i.icon.locked {
+  margin-left: 1em;
+}
+
+i.icon.unlocked,
+i.icon.unlocked::before {
+  color: #e8e8e8;
+}
+
+i.icon.locked,
+i.icon.locked::before {
+  color: #bdbfc3;
+}
+
+i.icon.unlocked:hover,
+i.icon.locked:hover {
+  color: #d0d1d3;
+}
+
+i.icon.unlocked.playerRow::before,
+i.icon.locked.playerRow::before {
+  margin-left: -1em;
+}
+
+i.icon.unlocked.playerRow:hover {
+  color: #e8e8e8;
+}
+
+i.icon.locked.playerRow:hover {
+  color: #bdbfc3;
+}
+
+/* modal 的 modal */
+.scrolling.dimmable > .modals ~ .modals {
+  justify-content: center;
+}
+
+.ui.modal .content .ui.form .inline.fields.equal {
+  margin-bottom: 24px;
+}
+
+.ui.modal .content .ui.form .inline.fields.equal:last-child {
+  margin-bottom: 0;
+}

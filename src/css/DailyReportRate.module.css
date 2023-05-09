@@ -1,0 +1,82 @@
+/**
+ * 日營運報表 - 轉化率/留存率
+ */
+:global(.ui.secondary.menu) :global(.item).menu-left-item {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+:global(.ui.secondary.menu) :global(.item).menu-item {
+  font-weight: 400;
+  height: 52px;
+}
+
+:global(.ui.secondary.menu) :global(.item).menu-item:hover {
+  background: none;
+  color: #669bdf;
+  text-decoration: none;
+}
+
+:global(.ui.secondary.menu) :global(.item).menu-item:hover span {
+  text-decoration: underline;
+}
+
+:global(.ui.secondary.menu) :global(.item).menu-item :global(i.icon.chevron) {
+  margin-left: 0.5em;
+  font-size: 18px;
+}
+
+.explanation-block {
+  background: rgba(102, 155, 223, 0.15);
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+:global(.down).explanation-block {
+  display: none;
+}
+
+.popup-font::before {
+  margin-left: 0.5em;
+}
+
+:global(.ui.table).customized-table tbody tr td:global(.result-cell) {
+  background-color: #f5f6fa;
+}
+
+:global(.ui.table).customized-table
+  tbody
+  tr
+  td:global(.result-cell):first-child {
+  font-weight: bold;
+  text-align: right;
+}
+
+:global(.ui.table).customized-table tbody tr td span.progress {
+  margin-left: 0.5em;
+  position: absolute;
+}
+
+:global(.dimmable).customized-chart {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1em;
+  width: calc(100% - 2em) !important;
+}
+
+li.list-item {
+  margin-bottom: 0.5em;
+}
+
+li.list-item:last-child {
+  margin-bottom: 0em;
+}
+
+.list-item span {
+  font-weight: bold;
+}
+
+.explanation-block span.list-item-span {
+  margin-left: 0.5em;
+}

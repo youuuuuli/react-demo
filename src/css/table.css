@@ -1,0 +1,367 @@
+/*******************************
+            Table
+*******************************/
+/* 同 Striped 效果 */
+.ui.table tbody tr:nth-child(even) {
+  background-color: #fcfcfe;
+}
+
+.ui.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Sortable */
+.ui.sortable.table > thead tr th {
+  position: relative;
+}
+
+.ui.sortable.table > thead > tr th .sort.icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  -webkit-transform: translateY(-webkit-calc(-50% - 2px));
+  -ms-transform: translateY(calc(-50% - 2px));
+  transform: translateY(calc(-50% - 2px));
+  color: #e8e8e8;
+  margin-right: 0;
+}
+
+.ui.sortable.table > thead > tr th .sort.icon.ascending,
+.ui.sortable.table > thead > tr th .sort.icon.descending {
+  color: #669bdf;
+}
+
+/* 表格內的按鈕連結 */
+.ui.table tbody a.ui.button {
+  font-size: 13px;
+  font-weight: normal;
+  user-select: text;
+}
+
+/* 表格tbody tfoot */
+.ui.table tfoot th {
+  border-top: 1px solid #e7ecf1;
+  background: #f5f6fa;
+}
+
+/* form.fields in table */
+.ui.table div.inline.fields {
+  margin-bottom: 0;
+}
+
+td > font {
+  color: #ed6b75;
+}
+
+td > font:not(:first-child) {
+  margin-left: 1em;
+}
+
+td > br ~ font:not(:first-child) {
+  margin-left: 0;
+}
+
+.ui.celled.table > tbody > tr > td .checkbox-pos {
+  padding-top: 3px;
+  padding-left: 2px;
+}
+
+.ui.celled.table > tbody > tr > td.bg-primary-0 {
+  background-color: #f4f6f9;
+}
+
+.ui.celled.table > tbody > tr.bg-primary-1 {
+  background-color: #e1e5ec;
+}
+
+.ui.celled.table > tbody > tr > td.border-left-hide {
+  border-left: 0px;
+}
+
+.ui.celled.table > tbody > tr > td .balance {
+  color: #669bdf;
+  border-color: #669bdf;
+  font-weight: normal;
+}
+
+.ui.celled.table > tbody > tr.child {
+  background-color: #f4f6f9;
+}
+
+.ui.celled.table > tbody > tr.child:hover {
+  background-color: #f4f6f9;
+}
+
+.ui.celled.table > tbody > tr.child td:nth-child(2) {
+  border-left: none;
+}
+
+.ui.celled.table > tbody > tr.open {
+  background-color: #f4f6f9;
+}
+
+.ui.celled.table > tbody > tr.open td {
+  border-bottom: 1px solid #e7ecf1;
+}
+
+.ui.celled.table > tbody > tr.open:hover {
+  background-color: #f4f6f9;
+}
+
+.invisible-col {
+  display: none;
+}
+
+@media only screen and (max-width: 865px) {
+  .report-table tr td,
+  .report-table tr th {
+    min-width: 98px !important;
+    padding: 8px;
+  }
+
+  .ui.table.report-table.structured tr > th,
+  .ui.table.report-table.structured tr > td {
+    border-bottom: 1px solid #e7ecf1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  thead {
+    display: table-header-group !important;
+  }
+  .ui.table:not(.unstackable) tbody {
+    display: table-row-group !important;
+  }
+  .ui.table:not(.unstackable) tr {
+    display: table-row !important;
+    box-shadow: 0 0 0 0 !important;
+  }
+  .ui.table:not(.unstackable) tr > td,
+  .ui.table:not(.unstackable) tr > th {
+    display: table-cell !important;
+    padding: 5px 10px !important;
+  }
+  .ui.table:not(.unstackable) tr.invisible-col,
+  .ui.table:not(.unstackable) tr > td.invisible-col,
+  .ui.table:not(.unstackable) tr > th.invisible-col {
+    display: none !important;
+  }
+  .ui.table:not(.unstackable) tr > th {
+    border-left: 1px solid #e7ecf1 !important;
+    border-top: 1px solid #e7ecf1 !important;
+  }
+  .ui.table:not(.unstackable) tr > td {
+    border-top: 1px solid #e7ecf1 !important;
+    border-left: 1px solid #e7ecf1 !important;
+  }
+  .ui.celled.table tr td:first-child,
+  .ui.celled.table tr:first-child th:first-child {
+    border-left: none !important;
+  }
+
+  tfoot {
+    display: table-footer-group !important;
+    background: #f5f6fa;
+  }
+  .ui.celled.table > tbody > tr.child {
+    box-shadow: 0 0 0 0 !important;
+  }
+  .ui.celled.table > tbody > tr.open td {
+    border-bottom: 1px solid #e7ecf1 !important;
+  }
+  .ui.celled.table > tbody > tr.child td {
+    border-left: none !important;
+    border-top: none !important;
+  }
+  .ui.celled.table > tbody > tr > td .detailToggle {
+    left: 5px;
+  }
+}
+
+/*單一 Column 需要 Sort 功能*/
+.ui.table thead th.sort {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ui.table thead th.sort:hover,
+.ui.table thead th.sort.sorted {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.ui.table thead th.sort:after {
+  content: "";
+  display: none;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: inherit;
+  height: 1em;
+  width: auto;
+  opacity: 0.8;
+  margin: 0 0 0 0.5em;
+  font-family: Icons;
+}
+
+.ui.table thead th.sort.sorted:after {
+  display: inline-block;
+}
+
+.ui.table thead th.sort.descending:after {
+  content: "\f0d7";
+}
+
+.ui.table thead th.sort.ascending:after {
+  content: "\f0d8";
+}
+
+.order-table tbody tr:first-child th {
+  border-top: 0;
+}
+.order-table tbody th {
+  background-color: #f5f6fa;
+  border-top: 1px solid #e7ecf1;
+}
+
+/* sub-total */
+.ui.table tr.sub-total:last-child td {
+  border-bottom: 1px solid #e7ecf1;
+}
+
+.ui.table tr.sub-total {
+  background: #f5f6fa;
+}
+
+/* X軸滑動table */
+.scroll-table-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  border: 1px solid #e7ecf1;
+  border-radius: 0.3rem;
+}
+
+.scroll-table-container .ui.table {
+  border: none;
+}
+
+/* 凍結欄位 */
+.scroll-table-container .ui.table tr .column-sticky-left,
+.scroll-table-container .ui.table tr .column-sticky-right {
+  position: sticky;
+  z-index: 1;
+}
+
+.scroll-table-container .ui.table tr .column-sticky-left {
+  left: 0;
+}
+
+.scroll-table-container .ui.table tr .column-sticky-right {
+  right: 0;
+}
+
+.scroll-table-container .ui.table thead .column-sticky-left,
+.scroll-table-container .ui.table thead .column-sticky-right {
+  background-color: #f5f6fa;
+}
+
+.scroll-table-container .ui.table tbody tr .column-sticky-left,
+.scroll-table-container .ui.table tbody tr .column-sticky-right {
+  background-color: #fff;
+}
+
+.scroll-table-container .ui.table tbody tr:nth-child(even) .column-sticky-left,
+.scroll-table-container
+  .ui.table
+  tbody
+  tr:nth-child(even)
+  .column-sticky-right {
+  background-color: #fcfcfe;
+}
+
+.scroll-table-container .ui.table tbody tr:hover .column-sticky-left,
+.scroll-table-container .ui.table tbody tr:hover .column-sticky-right {
+  background-color: inherit;
+}
+
+/* stickyColumn陰影 */
+.scroll-table-container .ui.table tr .sticky-shadow:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  z-index: 0;
+}
+
+.scroll-table-container .ui.table tr .column-sticky-left.sticky-shadow:after {
+  right: -10px;
+  background: linear-gradient(to right, #e7ecf1, rgba(255, 255, 255, 0) 70%);
+}
+
+.scroll-table-container .ui.table tr .column-sticky-right.sticky-shadow:after {
+  left: -10px;
+  background: linear-gradient(to left, #e7ecf1, rgba(255, 255, 255, 0) 70%);
+}
+
+.scroll-table-container
+  .ui.table
+  > thead
+  > tr:not(:first-child)
+  > th:first-child {
+  border-left: 1px solid #e7ecf1 !important;
+}
+
+/* 處理表格內多筆輸入框間距 */
+@media screen and (max-width: 1440px) {
+  .ui.form .ui.table td .inline.fields .field {
+    margin: 0 0.5em 0 0;
+  }
+}
+
+.ui.table tr th .fields,
+.ui.table tr td .fields {
+  margin: 0;
+}
+
+/* 損益監控設定-遊戲平台 */
+.ui.table td.vendor-list > button {
+  margin-bottom: 0.25em;
+}
+
+.ui.celled.table > .singleLine > tr > th {
+  border-width: 1px 0;
+}
+
+/* 適用批量上傳錯誤提示區塊 */
+.error-table.ui.table > tbody {
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.error-table.ui.table > tbody tr {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* 全部表格 */
+.ui.table th,
+.ui.table td {
+  word-break: normal;
+}
+
+/* 表格內按鈕 */
+.ui.table td .ui.button {
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
+
+.ui.table td .ui.button:first-child {
+  margin-top: 0;
+}
+
+.ui.table td .ui.button:last-child {
+  margin-bottom: 0;
+}

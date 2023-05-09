@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {
   Container,
@@ -6,7 +6,11 @@ import {
   Sidebar,
   Icon,
 } from 'semantic-ui-react';
+import Cookies from 'js-cookie';
 import SidebarsMap from './constants/SidebarsMap';
+import ApiContext from './default/ApiContext';
+import zhTW from './locale/zh_tw.json';
+import zhCN from './locale/zh_cn.json';
 
 const router = createBrowserRouter(SidebarsMap);
 
@@ -50,14 +54,29 @@ const AppSidebar = ({ visible }) => (
 );
 
 const App = () => {
+  const localeMap = {
+    'zh-tw': zhTW,
+    'zh-cn': zhCN,
+  };
+
+  const lang = Cookies.get('lang') || 'zh-cn';
+  const locales = localeMap[lang];
+  const tr = (code) => locales[code] || '';
+
   const [visible, setVisible] = useState(false);
+
+  const apiProviderValue = useMemo(() => ({
+    tr,
+  }), [tr]);
 
   return (
     <React.StrictMode>
       <AppHeader visible={visible} setVisible={setVisible} />
       <AppSidebar visible={visible} />
       <Container style={{ marginTop: '7em' }}>
-        <RouterProvider router={router} />
+        <ApiContext.Provider value={apiProviderValue}>
+          <RouterProvider router={router} />
+        </ApiContext.Provider>
       </Container>
     </React.StrictMode>
   );

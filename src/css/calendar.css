@@ -1,0 +1,203 @@
+/*日期input*/
+.calendar-block input {
+  font-size: 12px;
+}
+
+/*******************************
+            RangeCalendar
+*******************************/
+/*日期選單區塊*/
+.rc-calendar.rc-calendar-range {
+  width: 645px !important;
+}
+
+.rc-calendar.rc-calendar-range.hide-sidebar {
+  width: 524px !important;
+}
+
+/*快捷選單*/
+.calendar-sidebar {
+  float: right;
+  width: 120px;
+  padding: 10px;
+}
+.ui.label.calendar-sidebar-block {
+  display: block;
+  margin: 5px 0;
+  padding: 0;
+  height: 33px;
+  color: #404040;
+  text-align: center;
+  line-height: 33px;
+  border-radius: 3px;
+}
+.ui.label.calendar-sidebar-block:hover {
+  background-color: #669bdf;
+  color: #fff;
+}
+.calendar-block {
+  min-width: 320px !important;
+  height: 36px;
+}
+.calendar-block.date-only {
+  min-width: 210px !important;
+  height: 36px;
+}
+
+/*日期選單日期區塊*/
+.rc-calendar-panel {
+  display: inline-block;
+  padding: 16px 5px;
+}
+
+.rc-calendar-header {
+  border-bottom: 0;
+}
+
+.rc-calendar-next-year-btn,
+.rc-calendar-prev-year-btn {
+  display: none;
+}
+
+.rc-calendar-header .rc-calendar-next-month-btn,
+.rc-calendar-header .rc-calendar-prev-month-btn {
+  font-size: 20px;
+  color: #404040;
+  font-weight: 700;
+}
+.rc-calendar-header .rc-calendar-next-month-btn {
+  right: 0;
+}
+.rc-calendar-header .rc-calendar-prev-month-btn {
+  left: 0;
+}
+.rc-calendar-header .rc-calendar-next-month-btn:hover,
+.rc-calendar-header .rc-calendar-prev-month-btn:hover {
+  color: #669bdf;
+}
+.rc-calendar-range .rc-calendar-in-range-cell {
+  background: #eceff4 !important;
+}
+
+/*日曆左右區塊*/
+.rc-calendar-range-part.rc-calendar-range-left,
+.rc-calendar-range-part.rc-calendar-range-right {
+  float: left;
+}
+.rc-calendar-month-select:hover,
+.rc-calendar-year-select:hover {
+  color: #669bdf;
+}
+
+/*日曆input*/
+.rc-calendar-input-wrap {
+  border-bottom: 0;
+  height: 36px !important;
+  box-sizing: border-box;
+  padding: 0 6px;
+}
+.rc-calendar-date-input-wrap {
+  margin-bottom: 5px;
+}
+.rc-calendar-input,
+.rc-calendar-range .rc-calendar-input,
+.rc-calendar-range .rc-time-picker-input {
+  text-align: center;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  width: 225px;
+  border-radius: 3px;
+}
+.rc-calendar-range-middle {
+  display: none;
+}
+.rc-calendar-clear-btn {
+  top: 0;
+  right: 0;
+}
+.rc-calendar.rc-calendar-range .rc-calendar-clear-btn {
+  top: 12px;
+}
+
+/*日曆日期*/
+.rc-calendar-date {
+  width: 33px;
+  border-radius: 0;
+}
+.rc-calendar-date:hover,
+.rc-calendar-in-range-cell .rc-calendar-date:hover {
+  background: #548ed8 !important;
+  color: #fff;
+}
+
+/*被選取的日期區間*/
+.rc-calendar-in-range-cell .rc-calendar-date {
+  background: #eceff4;
+  color: #404040;
+}
+
+/*今天的日期*/
+.rc-calendar-today .rc-calendar-date {
+  border: 1px solid #669bdf !important;
+  color: #669bdf;
+}
+.rc-calendar-today .rc-calendar-date:hover {
+  color: #fff;
+}
+
+/*已選取的日期*/
+.rc-calendar-selected-day .rc-calendar-date {
+  background: #669bdf !important;
+  color: #fff;
+}
+
+.rc-calendar-input-wrap .rc-calendar-clear-btn {
+  display: none;
+}
+
+/*******************************
+            SingleCalendar
+*******************************/
+.rc-calendar {
+  width: 262px !important;
+}
+.rc-calendar-selected-date .rc-calendar-date:hover {
+  background: #548ed8 !important;
+  color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .rc-calendar-picker {
+    height: 450px;
+    overflow-y: scroll;
+  }
+  .rc-calendar.rc-calendar-range {
+    width: 270px;
+  }
+  .calendar-sidebar {
+    width: 100%;
+  }
+  .calendar-sidebar-block {
+    width: calc(94% / 3);
+    margin: 1% 1% !important;
+    float: left;
+  }
+  .ui.label.calendar-sidebar-block {
+    height: 26px;
+    line-height: 26px;
+  }
+  .rc-calendar-range-part.rc-calendar-range-right {
+    clear: left;
+    margin-top: 10px;
+  }
+  .rc-calendar.rc-calendar-range .rc-calendar-clear-btn {
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 467px) {
+  .calendar-block {
+    min-width: 100% !important;
+  }
+}

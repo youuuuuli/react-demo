@@ -1,0 +1,11 @@
+{
+  "dateshift": "MM/DD",
+  "datetimeshift": "MM/DD HH:mm",
+  "datetime": "YYYY-MM-DD HH:mm:ss",
+  "exportDatetime": "YYYY_MM_DD_HH_mm_ss",
+  "dateHM": "YYYY-MM-DD HH:mm",
+  "date": "YYYY-MM-DD",
+  "time": "HH:mm:ss",
+  "year": "YYYY",
+  "month": "MM"
+}

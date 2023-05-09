@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container } from 'semantic-ui-react';
 import Pagination from 'rc-pagination';
 import Select from 'rc-select';
 import Cookies from 'js-cookie';
+import { sprintf } from 'sprintf-js';
 import 'rc-pagination/assets/index.css';
-import 'rc-select/assets/index.less';
+import 'rc-select/assets/index.css';
 import zhTW from 'rc-pagination/lib/locale/zh_TW';
 import zhCN from 'rc-pagination/lib/locale/zh_CN';
 import viVN from 'rc-pagination/lib/locale/vi_VN';
 import enUS from 'rc-pagination/lib/locale/en_US';
 import koKR from 'rc-pagination/lib/locale/ko_KR';
 import jaJP from 'rc-pagination/lib/locale/ja_JP';
+import { decimal } from './decimal';
+import ApiContext from '../default/ApiContext';
+
+/** @typedef {import('Docs/global.d').PaginationType} PaginationType */
 
 /**
  * 分頁選單
@@ -19,11 +24,15 @@ import jaJP from 'rc-pagination/lib/locale/ja_JP';
  * - #1 內部使用 onPageChanged({pagination}) 傳入分頁參數
  * - #2 pagination: {first_result, max_results, total}
  *
- * @param {object} props Props
- * @param {boolean} props.disabled 禁能
- * @param {object} props.pagination 分頁資料
- * @param {Function} props.onPageChanged 換頁callback
- * @returns {JSX.Element} Pagination
+ * @param {{
+ * disabled: boolean,
+ * pagination: PaginationType,
+ * onPageChanged: Function
+ * }} props -
+ * - disabled: 禁能
+ * - pagination: 分頁資料
+ * - onPageChanged: 換頁callback
+ * @returns {JSX.Element} JSX
  * ------------------------------
  * @example <caption>基本樣式</caption>
  * <Pagination2
@@ -32,6 +41,7 @@ import jaJP from 'rc-pagination/lib/locale/ja_JP';
  * />
  */
 const Pagination2 = (props) => {
+  const { tr } = useContext(ApiContext);
   const localeMap = {
     'zh-tw': zhTW,
     'zh-cn': zhCN,
@@ -86,7 +96,7 @@ const Pagination2 = (props) => {
       <Pagination
         data-testid="pagination"
         selectComponentClass={Select}
-        // showTotal={(entryTotal) => entryTotal}
+        showTotal={(entryTotal) => `${sprintf(tr('M_PAGINATION_MEMO_1'), decimal(entryTotal, 0))}`}
         showSizeChanger
         current={currPage}
         pageSize={maxResults}

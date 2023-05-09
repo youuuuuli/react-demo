@@ -1,12 +1,12 @@
 import React from 'react';
-import Home from '../components/Home';
+import RetentionRateLogin from '../pages/RetentionRateLogin';
 import LoginForm from '../components/LoginForm';
 
 const Sidebars = [
   {
-    path: '/home',
-    content: 'Home',
-    element: <Home />,
+    path: '/retentionRateLogin',
+    content: '登入留存率',
+    element: <RetentionRateLogin />,
   },
   {
     path: '/',

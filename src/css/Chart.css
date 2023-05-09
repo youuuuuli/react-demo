@@ -1,0 +1,359 @@
+.ui.segments.chart-wrap {
+  box-shadow: none;
+}
+
+.ui.segments.chart-wrap > .chart-main {
+  height: 420px;
+}
+
+.ui.segments.chart-wrap > .ui.segments.horizontal > .segment:first-child {
+  flex: 3;
+}
+
+.ui.segments.chart-wrap .dimmable > .dimmer {
+  z-index: 1;
+}
+
+.ui.segments.chart-wrap .active.dimmer ~ .dimmable > .dimmer {
+  z-index: 0;
+}
+
+/* 視窗過小時呈現 x 軸 scroll */
+.ui.segments.chart-wrap
+  > .segment
+  .dimmable.os-chart_kind-chart
+  > .chart-x-scroll {
+  overflow-x: auto;
+}
+
+/* echarts canvas 最小寬度 */
+.ui.segments.chart-wrap
+  > .segment
+  .dimmable.os-chart_kind-chart
+  > .chart-x-scroll
+  > .echarts-for-react {
+  min-width: 1040px;
+}
+
+.ui.segments.chart-wrap
+  > .ui.segments.horizontal
+  > .segment:first-child
+  .dimmable.os-chart_kind-chart {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 2em) !important;
+}
+
+.ui.segments.chart-wrap > .ui.segments.horizontal > .segment:last-child {
+  flex: 1;
+  padding: 0;
+  box-shadow: -1px 0 5px 0 rgba(60, 76, 93, 0.2);
+}
+
+/* 第一層圖表類型按鈕 */
+.ui.form.os-chart_inline {
+  margin-bottom: 10px;
+}
+
+.ui.form.os-chart_inline.warning {
+  border-radius: 3px;
+  border: 1px solid #ed6b75;
+  box-shadow: 0 0 5px #ed6b75;
+  transition: 0.3s;
+}
+
+.ui.form.os-chart_inline .field {
+  margin-bottom: 0;
+}
+
+/* 讀取/無資料遮罩 */
+.ui.segments.chart-wrap .dimmer.active {
+  background: #f9f9f9;
+}
+
+.ui.segments.chart-wrap .dimmer .content {
+  color: #333;
+}
+
+/* 右側面板 */
+.ui.segment.os-chart_panel-wrap .ui.grid {
+  margin: 0;
+  height: 100%;
+  flex-direction: column;
+}
+
+.ui.segment.os-chart_panel-wrap .ui.grid > .row {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.ui.segment.os-chart_panel-wrap .ui.grid > .row:first-child {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* 第一層右側面板 */
+.ui.segment.os-chart_panel-wrap .os-chart_panel-level1,
+.ui.segment.os-chart_panel-wrap .os-chart_panel-all {
+  flex: 1;
+}
+
+.ui.segment.os-chart_panel-wrap .os-chart_panel-level1 > .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ui.segment.os-chart_panel-wrap .os-chart_panel-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 1rem;
+  width: calc(100% - 2rem);
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level1
+  > .dimmable
+  > .active.dimmer {
+  height: calc(100% - 2rem);
+  margin: 1rem 0;
+}
+
+.ui.segment.os-chart_panel-wrap .dimmable.os-chart_panel-all .active.dimmer {
+  height: calc(100% - 9rem);
+  margin: 7rem 0 1rem 0;
+  padding: 0 1rem;
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level2
+  .dimmable
+  .active.dimmer {
+  height: calc(100% - 2rem);
+  margin: 4rem 0 1rem 0;
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level1
+  > .column.os-chart_panel-fishing {
+  justify-content: space-evenly;
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level1
+  .os-chart_panel-sum-header {
+  margin-bottom: 0;
+}
+
+.ui.segment.os-chart_panel-wrap .os-chart_panel-level1 .ui.list > .item {
+  margin-bottom: 16px;
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level1
+  .ui.list
+  > .item
+  .header {
+  display: inline-block;
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level1
+  .ui.list
+  > .item
+  .header
+  ~ span {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level1
+  .ui.list
+  > .item:last-child {
+  margin-bottom: 0;
+}
+
+/* 第二層右側面板 */
+.ui.segment.os-chart_panel-wrap .os-chart_panel-level2 {
+  overflow-y: auto;
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.ui.segment.os-chart_panel-wrap .os-chart_panel-level2 .dimmable {
+  height: calc(100% - 3rem);
+}
+
+.ui.segment.os-chart_panel-wrap .os-chart_panel-level2 .ui.list .item {
+  padding: 10px 8px;
+}
+
+/* 單日趨勢走勢 */
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level2
+  .ui.list
+  .item.os-chart_panel-trend-day {
+  cursor: pointer;
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level2
+  .ui.list
+  .item.os-chart_panel-trend-day
+  > div:first-child {
+  color: #669bdf;
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level2
+  .ui.list
+  .item.os-chart_panel-trend-day.blueGradual,
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level2
+  .ui.list
+  .item.os-chart_panel-trend-day:hover {
+  background: linear-gradient(to right, #1875c5, #72b6f1);
+  border-radius: 5px;
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level2
+  .ui.list
+  .item.os-chart_panel-trend-day.blueGradual
+  > div,
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-level2
+  .ui.list
+  .item.os-chart_panel-trend-day:hover
+  > div {
+  color: #fff;
+}
+
+.ui.segments.chart-wrap
+  > .ui.segments.horizontal.chart-wrap_level2
+  .ui.segment
+  .ui.grid {
+  height: 100%;
+  margin: 0;
+}
+
+.ui.segment.os-chart_panel-wrap .ui.grid > .row.equal {
+  margin-bottom: auto;
+}
+
+.ui.segment.os-chart_panel-wrap .os-chart_panel-sum {
+  background: #f5f6fa;
+  margin-top: auto;
+  padding: 1rem;
+}
+
+.ui.segment.os-chart_panel-wrap
+  .os-chart_panel-header
+  > .os-chart_panel-header-time {
+  font-size: 13px;
+}
+
+/* 第二層常用頁籤彈窗 */
+.ui.modal.modal-favor > .header > span {
+  font-size: 12px;
+  line-height: 18px;
+  margin-left: 5px;
+}
+
+.ui.modal.modal-favor > .content {
+  padding: 24px 20px;
+  max-height: 470px;
+  overflow: auto;
+}
+
+.ui.modal.modal-favor > .content > .ui.form > .field:nth-child(3) {
+  margin-left: 35px;
+}
+
+.ui.modal.modal-favor > .content > .ui.form > .field {
+  margin-bottom: 10px;
+}
+
+.field.sortable-item {
+  padding: 0 1em;
+}
+
+.sortable-item i {
+  margin-right: 10px;
+}
+
+.sortable-item span {
+  float: right;
+}
+
+/* 處理彈窗內欲排序 */
+.sortableHelper {
+  z-index: 1001 !important;
+}
+
+.ui.grid > .row > .dimmer.active ~ .column.chart-sub-pie-list {
+  z-index: 0;
+}
+
+/* 圓餅圖指標 */
+.os-chart_pie-chart-percentage {
+  display: none;
+  color: #bdbfc3;
+  margin-left: 10px;
+}
+
+/* 單一種類遊戲圓餅圖 */
+.ui.grid > .row > .column.chart-sub-pie-list {
+  padding: 0;
+  margin-right: -1px;
+  z-index: 1;
+}
+
+.chart-sub-pie-list .list .item,
+.chart-sub-pie-list .list .item:first-child,
+.chart-sub-pie-list .list .item:last-child {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  margin-left: auto;
+  max-width: 8rem;
+}
+
+.chart-sub-pie-list .list .item .icon {
+  vertical-align: middle;
+}
+
+.chart-sub-pie-list .list .item.active {
+  border-radius: 3px 0 0 3px;
+  background: #fafafc;
+  border: 1px solid #e7ecf1;
+  border-right-color: #fafafc;
+}
+
+.chart-sub-pie {
+  background: #fafafc;
+  border: 1px solid #e7ecf1;
+  border-radius: 10px;
+  padding: 0 !important;
+}
+
+.ui.segment.os-chart_ranking {
+  padding: 24px;
+}
+
+/* 圓餅圖指標 */
+@media screen and (max-width: 1680px) {
+  .os-chart_pie-chart-percentage {
+    display: block;
+  }
+}
+
+.ui.table tbody tr.rankRowStyle {
+  background-color: #fcfcfe;
+}
+
+.ui.table tbody tr.rankRowStyleWhite {
+  background-color: #fff;
+}

@@ -1,0 +1,235 @@
+/******************************
+          遊戲平台組合
+*******************************/
+.game-vendor-kind .ui.checkbox {
+  display: block;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 14px;
+  border-right: 1px solid transparent;
+  border-right-color: #e7ecf1;
+}
+
+.game-vendor-kind .ui.checkbox ~ .ui.checkbox {
+  margin-left: 0;
+}
+
+.game-vendor-kind .ui.checkbox.checked {
+  border-right: 2px solid #669bdf;
+  margin: 0 -1px 0 0;
+}
+
+.game-vendor-kind .ui.checkbox.checked label,
+.game-vendor-kind .ui.checkbox.checked label::after,
+.game-vendor-kind .ui.checkbox.checked.indeterminate label::after,
+.game-vendor-kind .ui.checkbox input:checked ~ label::after {
+  color: #669bdf;
+}
+
+.game-vendor-kind .ui.checkbox.checked label::before,
+.game-vendor-kind .ui.checkbox.checked.indeterminate label::before {
+  border-color: #669bdf;
+}
+
+.game-vendor-kind .ui.grid {
+  margin: 0.3rem 0;
+}
+
+.game-vendor-kind .ui.grid .column {
+  padding: 0 0.3rem 0 1rem;
+}
+
+.game-vendor-kind .ui.grid .column:not(:nth-last-child(-n + 4)) {
+  margin-bottom: 1em;
+}
+
+/* 百寶箱 Segment 內對齊 */
+.segment-checkbox-group,
+.segment-button-group {
+  padding-top: 28px;
+}
+
+.segment-checkbox-group .fields {
+  padding-bottom: 15px;
+}
+
+/* 彈跳視窗按鈕 */
+.icon.small.new-window {
+  cursor: pointer;
+  margin-left: 1em;
+  color: #669bdf;
+  font-size: 0.75em;
+}
+.icon.small.new-window:hover {
+  color: #3873be;
+}
+
+/* 例外處理: Confirm Modal 視窗的 Action 顏色 */
+/* 例外處理2: 排除平台走勢進階搜尋按鈕 */
+.ui.modal .actions .ui.primary.button:not(.os_chart__button-search) {
+  background: #1cbb9c;
+}
+
+.ui.modal .actions .ui.primary.button:not(.os_chart__button-search):hover {
+  background: #10b091;
+}
+
+/* 百寶箱 disabled button */
+.ui.basic.grey.button.disabled {
+  color: #bdbfc3 !important;
+}
+
+/* 遊戲平台按鈕 */
+.ui.basic.label.label-kind-1,
+.ui.basic.label.label-kind-2,
+.ui.basic.label.label-kind-3,
+.ui.basic.label.label-kind-4,
+.ui.basic.label.label-kind-5,
+.ui.basic.label.label-kind-6 {
+  margin: 0 0.25em 0.25em 0;
+  border: 1px solid transparent;
+}
+
+.ui.basic.label.label-kind-1 {
+  box-shadow: inset 0 0 0 1px #d20962;
+  color: #d20962 !important;
+}
+
+.ui.basic.label.label-kind-1:hover {
+  background: #d20962 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.ui.basic.label.label-kind-2 {
+  box-shadow: inset 0 0 0 1px #f47721;
+  color: #f47721 !important;
+}
+
+.ui.basic.label.label-kind-2:hover {
+  background: #f47721 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.ui.basic.label.label-kind-3 {
+  box-shadow: inset 0 0 0 1px #7ac143;
+  color: #7ac143 !important;
+}
+
+.ui.basic.label.label-kind-3:hover {
+  background: #7ac143 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.ui.basic.label.label-kind-4 {
+  box-shadow: inset 0 0 0 1px #00bce4;
+  color: #00bce4 !important;
+}
+
+.ui.basic.label.label-kind-4:hover {
+  background: #00bce4 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.ui.basic.label.label-kind-5 {
+  box-shadow: inset 0 0 0 1px #7d3f98;
+  color: #7d3f98 !important;
+}
+
+.ui.basic.label.label-kind-5:hover {
+  background: #7d3f98 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.ui.basic.label.label-kind-6 {
+  box-shadow: inset 0 0 0 1px #f9b92e;
+  color: #f9b92e !important;
+}
+
+.ui.basic.label.label-kind-6:hover {
+  background: #f9b92e !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* 頁籤按鈕 */
+.button-tab > .ui.basic.button {
+  margin-left: 8px;
+}
+
+.button-tab > .ui.basic.button:not(.icon) {
+  box-shadow: none !important;
+}
+
+.button-tab > .ui.basic.button:not(.icon):active,
+.button-tab > .ui.basic.button:not(.icon):focus {
+  box-shadow: none !important;
+  background: #e8e8e8;
+}
+
+.button-tab > .ui.basic.button:not(.icon):hover {
+  background-color: #f9f9f9 !important;
+}
+
+.button-tab > .ui.basic.button.active:not(.icon) {
+  background-color: #e8e8e8 !important;
+}
+
+/* Check Button */
+.check-btn.ui.checkbox {
+  font-size: 14px;
+  width: 100%;
+  padding: 8px 16px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #e8e8e8 !important;
+  background: #fff;
+}
+
+.check-btn.ui.disabled.checkbox {
+  cursor: default;
+}
+
+.check-btn.ui.checkbox label {
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.check-btn.ui.checkbox label::before {
+  top: 2px;
+}
+
+.check-btn.ui.checkbox:focus,
+.check-btn.ui.checkbox input:focus ~ label:before {
+  border-color: #e8e8e8;
+}
+
+.check-btn.ui.checkbox input:checked ~ label::before {
+  border-color: #669bdf;
+  background: #669bdf;
+}
+
+.check-btn.ui.disabled.checkbox input:checked ~ label::before {
+  background: #e8e8e8;
+}
+
+.check-btn.ui.checkbox input:checked ~ label::after {
+  color: #fff;
+}
+
+.check-btn.ui.checkbox.checked,
+.check-btn.ui.checkbox:hover,
+.check-btn.ui.checkbox input:hover ~ label:before,
+.check-btn.ui.checkbox:hover label::before,
+.check-btn.ui.checkbox.checked label::before {
+  border-color: #669bdf !important;
+}
+
+.check-btn.ui.disabled.checkbox input:checked ~ label::before,
+.check-btn.ui.disabled.checkbox.checked,
+.check-btn.ui.disabled.checkbox:hover,
+.check-btn.ui.checkbox input:hover ~ label:before,
+.check-btn.ui.checkbox:hover label::before {
+  border-color: #e8e8e8 !important;
+}

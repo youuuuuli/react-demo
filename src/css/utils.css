@@ -1,0 +1,312 @@
+/**
+ * 下拉選單
+ * Compact 支持 options 4 字內
+ */
+
+/* 支持三字內 */
+.small-dropdown > .ui.selection.dropdown {
+  min-width: 90px;
+}
+
+/* 支持六字內 */
+.middle-dropdown > .ui.selection.dropdown {
+  min-width: 130px;
+}
+
+/*
+ * 複製提示訊息
+ */
+.ui.pointing.label.copied-msg {
+  position: absolute;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.ui.pointing.label.copied-msg:before,
+.ui[class*="pointing above"].label.copied-msg:before {
+  left: 25%;
+}
+
+.label.dialog-title {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 20px;
+  color: #ed6b75;
+  box-shadow: 0px 0px 0px 1px #ed6b75 inset;
+  border-radius: 4px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.country-code .ui.dropdown.selection {
+  min-width: auto;
+  padding-left: 10px;
+  padding-right: 15px;
+  height: 36px;
+}
+.country-code > .ui.selection.dropdown > .divider.text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.country-code > .ui.selection.dropdown > .dropdown.icon {
+  padding-right: 5px;
+}
+
+/* 必填符號 */
+.marked-required {
+  color: #de5761;
+  margin-left: 4px;
+}
+
+/* 輸入框文字靠右 */
+.field .ui.input.text-right input[type="text"],
+.field.text-right .ui.input input[type="text"] {
+  text-align: right;
+}
+
+.ui.table td.no-data {
+  color: #bdbfc3;
+  font-size: 14px;
+  padding: 40px 0;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown > div[tabIndex="0"] {
+  outline: none;
+}
+
+.dropdown-zone,
+.dropdown-info {
+  font-size: 12px;
+  color: #bdbfc3;
+}
+
+.dropdown-zone {
+  position: relative;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #e8e8e8;
+  text-align: center;
+  padding: 15px 5px;
+  margin-right: 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-zone:hover {
+  border: 1px dashed #bdbfc3;
+}
+
+.dropdown-zone > img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.dropdown-control {
+  display: flex;
+  align-self: flex-start;
+  margin-right: 8px;
+  flex-direction: column;
+}
+
+.dropdown-control > .ui.button {
+  margin-bottom: 8px;
+}
+
+.is-first,
+.is-last {
+  visibility: hidden;
+}
+
+.is-next {
+  color: #36c5d3;
+}
+
+/* 表格使用 Checkbox */
+.has-checkbox {
+  width: 40px;
+  max-width: 40px;
+}
+
+/* 向左浮動 */
+.left-group {
+  float: left;
+}
+
+/* 子頁籤 */
+.second-tab {
+  position: relative;
+  overflow: hidden;
+}
+
+.second-tab button.ui.button {
+  border: none;
+  background: none;
+}
+
+.second-tab button.ui.button.active {
+  background: #e8e8e8;
+  font-weight: bold;
+}
+
+.visual-hide {
+  visibility: hidden !important;
+}
+
+.hide:not(i) {
+  display: none !important;
+}
+
+/* 面板的內容為垂直排列 */
+.panel-vertical > .inline.fields .field:first-child > label {
+  min-width: 86px;
+}
+
+.panel-vertical .inline.fields .field label ~ * {
+  width: auto;
+  vertical-align: middle;
+}
+
+/* 表格資料過長 */
+.long-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.country-flag i.flag {
+  margin: 0 4px;
+  vertical-align: middle;
+}
+
+/* 輔助文字 */
+.helper-text {
+  margin-left: 4px;
+}
+
+.ui.basic.segment.no-text > .ui[class*="left floated"].segment,
+.ui.basic.segment.no-text > .ui[class*="right floated"].segment {
+  line-height: 1;
+}
+
+/* 錯誤提示的 dropdown */
+.ui.form .field.error .ui.dropdown .disabled.item .text {
+  color: #bdbfc3;
+}
+
+.ui.form .field.error .ui.dropdown .menu .selected.item {
+  background: #fff6f6;
+}
+
+.circle-kind {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  line-height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-top: -2px;
+}
+
+.ui.form .fields.align-center {
+  align-items: center;
+}
+
+.ui.form .fields.align-top {
+  align-items: flex-start;
+}
+
+/* 處理 inline field 隨容器寬度 */
+.ui.form .inline.fields.inline-float {
+  display: inline-block;
+  width: 100%;
+  clear: both;
+}
+
+.ui.form .inline.fields.inline-float > .field {
+  float: left;
+  clear: unset;
+}
+
+/** segment 佔位遮罩 */
+.ui.segment.inpay-overlay::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 2;
+}
+
+/** 配合 segment 遮罩文字顯示(文字顯示於遮罩上層) */
+.ui.segment.inpay-overlay .ui.header.basic-red {
+  position: relative;
+  z-index: 3;
+}
+
+/* 檢索欄進階搜尋圖示 */
+.advanced-icon .ui.button::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url(/src/image/icon/advanced/filter_list_black_w.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  vertical-align: text-bottom;
+  margin: 0px 0px 0px 0.461538em;
+}
+
+.advanced-icon.invert .ui.button::after {
+  background-image: url(/src/image/icon/advanced/filter_list_black_b.svg);
+}
+
+/* 表格內僅省略文字 */
+.ellipsis-content {
+  max-width: 0;
+}
+
+.ellipsis-content .clipboard-text {
+  width: 100%;
+}
+
+/* 功能說明區塊 */
+.ui.message.memoBlock {
+  box-shadow: none;
+  background-color: #e9f0fa;
+}
+
+.ui.message.memoBlock .list:not(.ui) {
+  margin: 0.5em 0 0;
+}
+
+.ui.message.memoBlock.warn {
+  background-color: #fde9eb;
+}
+
+.ui.message.memoBlock .list .item > .list.custom-bulleted .item:before {
+  content: "。";
+}
+
+/** 表格內dropdown */
+.ui.dropdown.table-dropdown {
+  display: flex;
+  justify-content: space-around;
+}

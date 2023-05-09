@@ -1,0 +1,153 @@
+.rc-pagination {
+  margin: 8px 0 0;
+}
+
+/* normal */
+.rc-pagination-prev,
+.rc-pagination-next,
+.rc-pagination-jump-prev,
+.rc-pagination-jump-next,
+.rc-pagination-item,
+.rc-select-selection--single {
+  min-width: 26px;
+  height: 26px;
+  line-height: 26px;
+}
+
+.rc-pagination-prev,
+.rc-pagination-next,
+.rc-pagination-item,
+.rc-select-selection,
+.rc-select-focused .rc-select-selection {
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+}
+
+.rc-select-focused .rc-select-selection {
+  box-shadow: none;
+}
+
+.rc-pagination-item {
+  font-size: 13px;
+  font-family: "Helvetica Neue";
+}
+
+.rc-pagination-prev,
+.rc-pagination-next,
+.rc-pagination-jump-prev,
+.rc-pagination-jump-next {
+  font-size: 14px;
+}
+
+.rc-pagination-total-text {
+  height: 26px;
+  line-height: 26px;
+}
+
+.rc-pagination-prev a,
+.rc-pagination-next a,
+.rc-pagination-item a,
+.rc-select {
+  color: #404040;
+}
+
+/* 隱藏頁碼 */
+.rc-pagination-jump-prev:after,
+.rc-pagination-jump-next:after {
+  color: #bdbfc3;
+  letter-spacing: 0;
+}
+.rc-pagination-jump-prev:hover:after,
+.rc-pagination-jump-next:hover:after {
+  color: #3c4c5d;
+}
+
+/* Hover */
+.rc-pagination-prev:not(.rc-pagination-disabled):hover,
+.rc-pagination-next:not(.rc-pagination-disabled):hover,
+.rc-pagination-item:hover {
+  background-color: #d0d1d3;
+  border: 1px solid #d0d1d3;
+}
+
+.rc-pagination-item:hover a {
+  color: #404040;
+}
+
+/* Active */
+.rc-pagination-item-active {
+  background-color: #3c4c5d;
+  border: 1px solid #3c4c5d;
+}
+
+.rc-pagination-item-active a {
+  color: #ffffff;
+}
+
+/* Focus */
+.rc-pagination-prev:focus,
+.rc-pagination-next:focus,
+.rc-pagination-jump-prev:focus,
+.rc-pagination-jump-next:focus,
+.rc-pagination-item:focus,
+.rc-select-selection:focus {
+  outline: none;
+}
+
+/* disabled */
+.rc-pagination-disabled {
+  background: #fafafc;
+}
+
+.rc-pagination-disabled a {
+  color: #bdbfc3;
+  width: 14px;
+  height: 14px;
+}
+
+/* 條/頁 */
+.rc-pagination-options {
+  margin-left: 8px;
+}
+
+.rc-select-arrow {
+  top: 0;
+}
+
+.rc-select-selection--single .rc-select-selection__rendered {
+  margin: 0;
+  padding: 3px 8px;
+  height: 26px;
+  line-height: 26px;
+}
+
+.rc-select-selection--single .rc-select-selection-selected-value {
+  left: 8px;
+}
+
+.rc-select-arrow .rc-select-arrow-icon {
+  border-color: #404040 transparent transparent transparent;
+}
+
+li.rc-select-dropdown-menu-item {
+  color: #404040;
+}
+
+.rc-select-enabled .rc-select-selection:hover,
+.rc-pagination-options .rc-select-enabled .rc-select-selection:active {
+  border-color: #d0d1d3;
+  box-shadow: none;
+}
+
+.rc-select-focused.rc-select-open .rc-select-selection {
+  border-color: #bdbfc3;
+  box-shadow: none;
+}
+
+li.rc-select-dropdown-menu-item-active {
+  background: #f9f9f9;
+}
+
+li.rc-select-dropdown-menu-item-selected {
+  background-color: #e8e8e8;
+}
