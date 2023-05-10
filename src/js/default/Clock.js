@@ -25,7 +25,7 @@ function Clock() {
   const { diff } = useDiffTime(0);
   const [time, setTime] = useState(
     moment()
-      .tz('Etc/UTC+8')
+      .tz('Etc/GMT-8')
       .format(DF.datetime),
   );
 
@@ -35,7 +35,7 @@ function Clock() {
   useEffect(() => {
     const timeout = setTimeout(() => setTime(
       moment()
-        .tz('Etc/UTC+8')
+        .tz('Etc/GMT-8')
         .add(diff, 'second')
         .format(DF.datetime),
     ), 1000);
