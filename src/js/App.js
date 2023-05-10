@@ -1,57 +1,34 @@
-import React, { useMemo, useState } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import React, { Suspense, lazy, useMemo } from 'react';
 import {
-  Container,
-  Menu,
-  Sidebar,
-  Icon,
-} from 'semantic-ui-react';
-import Cookies from 'js-cookie';
-import SidebarsMap from './constants/SidebarsMap';
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
 import ApiContext from './default/ApiContext';
+import isLogin from './login/IsLogin';
 import zhTW from './locale/zh_tw.json';
 import zhCN from './locale/zh_cn.json';
+import { Cookies } from './utils';
 
-const router = createBrowserRouter(SidebarsMap);
+const Login = lazy(() => import('./login'));
+const Default = lazy(() => import('./default'));
 
-const AppHeader = ({ visible, setVisible }) => {
-  const { pathname } = window.location;
+// 驗證登入狀態
+const Private = ({ children }) => {
+  const { pathname } = useLocation();
 
-  return (
-    <Menu fixed="top" inverted>
-      <Container>
-        <Menu.Item header>
-          My App
-        </Menu.Item>
-        {pathname !== '/' && (
-          <Menu.Item position="right" onClick={() => setVisible(!visible)}>
-            <Icon name="sidebar" />
-          </Menu.Item>
-        )}
-      </Container>
-    </Menu>
-  );
+  if (isLogin() && pathname === '/login') {
+    return <Navigate to="/" replace />;
+  }
+
+  if (!isLogin() && pathname !== '/login') {
+    return <Navigate to="/login" replace />;
+  }
+
+  return children;
 };
-
-const AppSidebar = ({ visible }) => (
-  <Sidebar
-    as={Menu}
-    animation="overlay"
-    direction="left"
-    inverted
-    vertical
-    visible={visible}
-  >
-    {SidebarsMap.map((sidebar) => (
-      <Menu.Item
-        as="a"
-        key={sidebar.content}
-        href={sidebar.path}
-        content={sidebar.content}
-      />
-    ))}
-  </Sidebar>
-);
 
 const App = () => {
   const localeMap = {
@@ -63,22 +40,43 @@ const App = () => {
   const locales = localeMap[lang];
   const tr = (code) => locales[code] || '';
 
-  const [visible, setVisible] = useState(false);
-
   const apiProviderValue = useMemo(() => ({
     tr,
-  }), [tr]);
+    lang,
+    config: { name: 'React Demo' },
+  }), [
+    tr,
+    lang,
+  ]);
 
   return (
-    <React.StrictMode>
-      <AppHeader visible={visible} setVisible={setVisible} />
-      <AppSidebar visible={visible} />
-      <Container style={{ marginTop: '7em' }}>
-        <ApiContext.Provider value={apiProviderValue}>
-          <RouterProvider router={router} />
-        </ApiContext.Provider>
-      </Container>
-    </React.StrictMode>
+    <Suspense fallback={<p>Loading...</p>}>
+      <ApiContext.Provider value={apiProviderValue}>
+        <div id="pageWrapper">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/404" exact element={<div>404 Not Found</div>} />
+              <Route
+                path="/login"
+                element={(
+                  <Private>
+                    <Login />
+                  </Private>
+                )}
+              />
+              <Route
+                path="/*"
+                element={(
+                  <Private>
+                    <Default />
+                  </Private>
+                )}
+              />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </ApiContext.Provider>
+    </Suspense>
   );
 };
 

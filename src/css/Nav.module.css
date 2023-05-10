@@ -1,0 +1,77 @@
+/**
+ * 導覽列
+ */
+.nav {
+  box-sizing: border-box;
+  height: 50px !important;
+  color: #939db1;
+}
+
+.nav :global(.ui.inverted.menu) {
+  display: block;
+  box-sizing: border-box;
+  padding: 5px 20px 5px 0;
+  height: 50px;
+  border-radius: 0;
+  background: #2b3643;
+  line-height: 36px;
+}
+
+.nav > :global(.pusher) {
+  height: 50px;
+}
+
+.nav :global(.ui.inverted.menu .left.menu .item:hover),
+.nav :global(.ui.inverted.menu) .nav-collapse:global(.item:hover) {
+  background: #2b3643;
+}
+
+.nav :global(.menu .left.menu) {
+  float: left;
+}
+
+.nav :global(.menu .left.menu .item) {
+  padding: 13px 0 13px 14px;
+}
+
+.nav :global(.menu .left.menu .item:hover .content.icon) {
+  color: #36c5d3;
+}
+
+.nav-hall-name :global(a:hover),
+.nav-hall-name :global(a:active) {
+  transition: all 3s ease-out;
+  transform: scale(1.1);
+}
+
+.nav :global(.left.sidebar.menu) .nav-collapse {
+  padding: 10px 0 9px 4px;
+  width: 36px;
+}
+
+.nav :global(.left.sidebar.menu) .nav-collapse:hover {
+  color: #36c5d3;
+}
+
+.nav :global(.ui.sidebar) {
+  overflow: hidden;
+}
+
+:global(.left.sidebar.menu) .nav-home {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0 0 0 6px;
+  padding: 0 12px;
+  max-width: 158px;
+  height: 36px;
+  border-radius: 15px !important;
+  border: 1px solid #3e4b5c;
+  background-color: #3e4b5c;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
+}

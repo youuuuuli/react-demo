@@ -13,15 +13,15 @@
 /*高度100%*/
 html,
 body,
-#app {
+#root {
   height: 100%;
   color: #404040;
   font-size: 13px;
   font-family: "Microsoft JhengHei", "Helvetica Neue";
   line-height: 20px;
 }
-#app > #pageWrapper,
-#app > #pageWrapper > div {
+#root > #pageWrapper,
+#root > #pageWrapper > div {
   height: 100%;
 }
 .clearfix::before {

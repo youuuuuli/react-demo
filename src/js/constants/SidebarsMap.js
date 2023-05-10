@@ -1,6 +1,5 @@
 import React from 'react';
 import RetentionRateLogin from '../pages/RetentionRateLogin';
-import LoginForm from '../components/LoginForm';
 
 const Sidebars = [
   {
@@ -11,7 +10,6 @@ const Sidebars = [
   {
     path: '/',
     content: 'Log out',
-    element: <LoginForm />,
   },
 ];
 

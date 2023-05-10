@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import Cookies from 'js-cookie';
 import ReactEcharts from 'echarts-for-react';
 import moment from 'moment-timezone';
 import { sprintf } from 'sprintf-js';
@@ -9,6 +10,7 @@ import LocalStorage from './LocalStorage';
 import Pagination from './Pagination';
 import setColumn from './SetColumn';
 import useHandleSort from './useHandleSort';
+import useHistory from './useHistory';
 import useStickyColumn from './useStickyColumn';
 
 /**
@@ -75,6 +77,7 @@ const windowOpen = (url, windowName = '_blank', windowFeatures = {}) => {
 };
 
 export {
+  Cookies,
   classNames,
   DateRange,
   deepCopy,
@@ -87,6 +90,7 @@ export {
   setColumn,
   sprintf,
   useHandleSort,
+  useHistory,
   useStickyColumn,
   windowOpen,
 };

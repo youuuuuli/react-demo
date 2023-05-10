@@ -1,0 +1,79 @@
+/**
+ * 浮動導覽頁
+ */
+.float-menu {
+  float: right;
+  font-size: 18px;
+}
+
+:global(.menu) .float-menu :global(.item) {
+  margin: 2px;
+  padding: 11px 10px;
+}
+
+:global(.menu) .float-menu :global(.item.active),
+:global(.menu) .float-menu :global(.item:active),
+:global(.menu) .float-menu :global(.item:hover) {
+  border-radius: 20px;
+}
+
+:global(.menu) .float-menu :global(.item .icons + .label) {
+  top: 0px;
+  padding: 1px 3px;
+  font-weight: normal;
+  border-radius: 3px;
+  line-height: 14px;
+}
+
+:global(.menu) .float-menu :global(.item .icons + .label.basic) {
+  background-color: transparent !important;
+  border: 0;
+}
+
+.nav-popup.float-nav-link {
+  top: 40px !important;
+  transform: none !important;
+  right: 0 !important;
+  left: unset !important;
+}
+
+:global(.ui.popup).nav-popup,
+:global(.ui.popup).nav-popup :global(.item),
+:global(.ui.popup).nav-popup:before {
+  background: #374050;
+  border: 0;
+  box-shadow: none;
+}
+
+:global(.ui).nav-popup :global(.ui.list .item),
+:global(.ui).nav-popup :global(.ui.list .item .icon),
+:global(.ui).nav-popup :global(.ui.list .item .content .header) {
+  color: #939db1;
+  font-size: 13px;
+}
+
+:global(.ui).nav-popup :global(.ui.list .item:hover),
+:global(.ui).nav-popup :global(.ui.list .item:hover .list),
+:global(.ui).nav-popup :global(.ui.list .item:hover .icon),
+:global(.ui).nav-popup :global(.ui.list .item:hover .content .header) {
+  background-color: #3d4c5c;
+  color: #fff;
+}
+
+:global(.ui).nav-popup :global(.ui.list .item .icon) {
+  width: 2em;
+}
+
+:global(.ui).nav-popup :global(.ui.list .item .image) {
+  width: 1rem;
+  height: auto;
+  margin-right: 0.2em;
+}
+
+:global(.ui.list .item .content .header).toggleTranslatorText {
+  color: #fff !important;
+}
+
+:global(.ui.menu .item).translateItem i {
+  cursor: pointer;
+}
