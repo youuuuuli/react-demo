@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useMemo } from 'react';
+import React, { Suspense, lazy, useEffect, useMemo } from 'react';
 import {
   BrowserRouter,
   Navigate,
@@ -10,7 +10,7 @@ import ApiContext from './default/ApiContext';
 import isLogin from './login/IsLogin';
 import zhTW from './locale/zh_tw.json';
 import zhCN from './locale/zh_cn.json';
-import { Cookies } from './utils';
+import { Cookies, moment } from './utils';
 
 const Login = lazy(() => import('./login'));
 const Default = lazy(() => import('./default'));
@@ -40,6 +40,20 @@ const App = () => {
   const locales = localeMap[lang];
   const tr = (code) => locales[code] || '';
 
+  /**
+   * 變更語系
+   *
+   * @param {string} target 語系
+   */
+  function changeLang(target) {
+    if (lang === target) {
+      return;
+    }
+
+    Cookies.set('lang', target);
+    moment.locale(target);
+  }
+
   const apiProviderValue = useMemo(() => ({
     tr,
     lang,
@@ -48,6 +62,10 @@ const App = () => {
     tr,
     lang,
   ]);
+
+  useEffect(() => {
+    moment.locale(lang);
+  }, []);
 
   return (
     <Suspense fallback={<p>Loading...</p>}>
@@ -60,7 +78,7 @@ const App = () => {
                 path="/login"
                 element={(
                   <Private>
-                    <Login />
+                    <Login lang={lang} setLang={changeLang} />
                   </Private>
                 )}
               />

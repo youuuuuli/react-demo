@@ -1,0 +1,187 @@
+.login-page {
+  margin: 0;
+  background-color: #3d4754;
+}
+
+.login-page :global(h1.ui.header) {
+  font-size: 3.5rem;
+  color: #2b3340;
+  margin-top: 2%;
+  margin-bottom: 0.8em;
+}
+
+.login-page :global(h1.header .sub.header) {
+  margin-top: 1em;
+  font-size: 13px;
+  color: #c8c8c8;
+}
+
+.login-page :global(.ui.button).submit {
+  background-image: linear-gradient(#37bbb3, #0eb6cb);
+  -webkit-box-shadow: 0 4px 10px -2px #0eb6cb;
+  color: #ffffff;
+  height: 50px;
+  font-size: 16px;
+  margin: 1em 0;
+}
+
+.login-page:not(.setup) :global(.ui.button).submit {
+  margin-top: 5vh;
+}
+
+.login-page :global(.ui.button).submit:hover {
+  background-image: linear-gradient(#40ada8, #26a8b5);
+}
+
+.login-page :global(.ui.form) input[type="text"],
+.login-page :global(.ui.form) input[type="password"] {
+  background: transparent;
+  border-top: 0px solid !important;
+  border-left: 0px solid !important;
+  border-right: 0px solid !important;
+  border-bottom: 1px solid #7d92b0 !important;
+  border-radius: 0;
+}
+
+.login-page :global(.ui.form .field) {
+  clear: both;
+}
+
+.login-page :global(.ui.form) {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.login-page :global(.ui.button).submit {
+  border-radius: 50px;
+}
+
+:global(.ui.grid).login-page :global(.column) {
+  background: #efefef;
+}
+
+@media all and (max-width: 767px) and (orientation: portrait) {
+  :global(.ui.grid).login-page :global(.column) {
+    max-width: 95vw;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media all and (max-width: 767px) and (orientation: landscape) {
+  :global(#root > div) {
+    height: auto;
+  }
+
+  :global(#root > div).otp {
+    height: 100%;
+  }
+
+  :global(.ui.grid).login-page :global(.column) {
+    max-width: 55vw;
+    position: relative;
+    padding: 1em;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .login-page {
+    background-color: transparent;
+    background-image: linear-gradient(#d6d6d6, #4b5e76);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto auto;
+    background-attachment: fixed;
+  }
+
+  :global(.ui.grid).login-page :global(.column) {
+    max-width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background: transparent;
+    padding: 1em;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1140px) {
+  :global(.ui.grid).login-page :global(.column) {
+    max-width: 500px;
+  }
+}
+
+@media all and (min-width: 1025px) and (orientation: landscape) {
+  :global(.ui.grid).login-page :global(.column) {
+    max-width: 500px;
+  }
+}
+
+/* otp 驗證 */
+@media all and (max-width: 767px) and (orientation: landscape) {
+  :global(#root > div).otp {
+    height: 100%;
+  }
+}
+
+/* otp 初始設定 */
+.login-page.setup .openQrcode {
+  display: block;
+  margin: 0 auto;
+  clear: both;
+}
+
+@media all and (max-width: 767px) and (orientation: landscape) {
+  :global(#root > div).setup {
+    height: auto;
+  }
+}
+
+@media all and (min-width: 768px) {
+  :global(.ui.grid).login-page.setup :global(.column) {
+    max-width: 40%;
+    background: transparent;
+    padding: 1em;
+    transform: translate(-50%, -58%);
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1140px) {
+  :global(.ui.grid).login-page.setup :global(.column) {
+    max-width: 450px;
+  }
+}
+
+@media all and (min-width: 1025px) and (orientation: landscape) {
+  :global(.ui.grid).login-page.setup :global(.column) {
+    max-width: 500px;
+    background: transparent;
+    padding: 2em;
+    transform: translate(-50%, -58%);
+  }
+
+  :global(.ui.grid).login-page.setup :global(.column .form) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/**
+ * OTP綁定裝置 Step 左邊
+ */
+.left-part {
+  float: left;
+  margin: 22px 0;
+}
+
+/**
+ * 臨時驗證碼登入
+ */
+:global(.ui.center.aligned.container) .temporary-otp-login {
+  border: none;
+  background: transparent !important;
+  cursor: pointer;
+}
