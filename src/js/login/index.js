@@ -54,7 +54,7 @@ const Login = (props) => {
   return (
     <Grid className={styles['login-page']} centered>
       <Grid.Column>
-        <Container textAlign="right">
+        <Container textAlign="right" className="hide">
           <Image
             title="繁體中文"
             src="/lan_tw.png"

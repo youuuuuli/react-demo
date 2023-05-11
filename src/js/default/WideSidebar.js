@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { Sidebar, Menu, Form } from 'semantic-ui-react';
-import { Cookies, classNames } from '../utils';
+import React, { useEffect } from 'react';
+import { Sidebar, Menu, Accordion } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import SidebarsMap from '../constants/SidebarsMap';
+import { Cookies, classNames, useHistory } from '../utils';
 import Clock from './Clock';
 import styles from '../../css/Sidebar.module.css';
-import ApiContext from './ApiContext';
 
 /**
  * 左側選單
@@ -14,36 +15,9 @@ import ApiContext from './ApiContext';
  * @returns {JSX.Element} WideSidebar
  */
 const WideSidebar = (props) => {
-  const { tr } = useContext(ApiContext);
   const username = Cookies.get('username');
-  const [hasExtension, setHasExtension] = useState(true);
-  const [hasMain, setHasMain] = useState(true);
-  const [activeItem, setActiveItem] = useState('main');
-  const [searchValue, setSearchValue] = useState('');
-
   const { wide, toggleSidebar } = props;
-
-  /**
-   * 處理變更左側選單
-   *
-   * @param {event} ev event
-   * @param {object} params params
-   * @param {string} params.name name
-   */
-  const handleActiveItem = (ev, { name }) => {
-    setActiveItem(name);
-  };
-
-  /**
-   * 處理搜尋欄位
-   *
-   * @param {Event} ev event
-   * @param {object} params param
-   * @param {string} params.value 搜尋值
-   */
-  const handleSearchValue = (ev, { value }) => {
-    setSearchValue(value);
-  };
+  const { location: { pathname } } = useHistory();
 
   useEffect(() => {
     toggleSidebar({ wide: window.innerWidth > 930 });
@@ -71,58 +45,26 @@ const WideSidebar = (props) => {
             <Clock />
           </span>
         )}
-
-        <Form autoComplete="off">
-          <Form.Input
-            className={styles['sidebar-search']}
-            icon="search"
-            iconPosition="left"
-            placeholder="Search"
-            value={searchValue}
-            onChange={handleSearchValue}
-          />
-        </Form>
       </div>
 
-      <Menu inverted pointing secondary>
-        <Menu.Item
-          className={classNames(
-            styles['sidebar-tab'],
-            styles['main-menu'],
-            { [styles['non-menu']]: !hasMain },
-          )}
-          name="main"
-          active={activeItem === 'main'}
-          onClick={handleActiveItem}
-          content={tr('M_TEXT_MAIN_MENU')}
-        />
-
-        <Menu.Item
-          className={classNames(
-            styles['sidebar-tab'],
-            styles['extension-menu'],
-            { [styles['non-menu']]: !hasExtension },
-          )}
-          name="extension"
-          active={activeItem === 'extension'}
-          onClick={handleActiveItem}
-          content={tr('M_TEXT_APPLICATION')}
-        />
-      </Menu>
-      {/*
-      <ExtensionItems
-        toggleSidebar={toggleSidebar}
-        visible={activeItem === 'extension'}
-        hasExtension={setHasExtension}
-        setGotExtension={setGotExtension}
-        searchValue={searchValue}
-      /> */}
-
-      {/* <MainItems
-        visible={activeItem === 'main'}
-        hasMain={setHasMain}
-        searchValue={searchValue}
-      /> */}
+      <Accordion className={styles['sidebar-accordion']}>
+        {SidebarsMap.map(({ content, path }) => (
+          <Accordion.Title key={path}>
+            <Link to={path}>
+              <Menu
+                className={classNames({
+                  [`${styles['active-item']}`]: pathname === path,
+                  [`${styles['current-located']}`]: pathname === path,
+                })}
+              >
+                <Menu.Item>
+                  {content}
+                </Menu.Item>
+              </Menu>
+            </Link>
+          </Accordion.Title>
+        ))}
+      </Accordion>
     </Sidebar>
   );
 };

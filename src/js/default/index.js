@@ -1,6 +1,8 @@
 import React, { Suspense, useState } from 'react';
 import { Container, Segment, Sidebar } from 'semantic-ui-react';
+import { Route, Routes } from 'react-router-dom';
 import styles from '../../css/Sidebar.module.css';
+import SidebarsMap from '../constants/SidebarsMap';
 import { classNames } from '../utils';
 import Nav from './Nav';
 import WideSidebar from './WideSidebar';
@@ -27,7 +29,19 @@ const Default = () => {
         <WideSidebar wide={wide} toggleSidebar={toggleSidebar} />
         <Sidebar.Pusher className={classNames('inner-page-pusher', { thin: wide })}>
           <Suspense fallback={<div>Loading...</div>}>
-            <Container fluid className="page-content" />
+            <Container fluid className="page-content">
+              <Routes>
+                {SidebarsMap.map((route) => (
+                  <Route
+                    path={route.path}
+                    key={route.path}
+                    element={
+                      <route.element />
+                    }
+                  />
+                ))}
+              </Routes>
+            </Container>
           </Suspense>
         </Sidebar.Pusher>
       </Sidebar.Pushable>

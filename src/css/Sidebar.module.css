@@ -1,7 +1,7 @@
 /**
  * 左側選單
  */
- :global(.segment).my-sidebar {
+:global(.segment).my-sidebar {
   margin: 0;
   width: 100%;
   height: calc(100% - 50px) !important;
@@ -40,39 +40,8 @@
 
 :global(.ui.inverted.menu .item),
 :global(.ui.inverted.menu .item > a:not(.ui)) {
-  color: #939DB1;
-}
-
-/* 搜尋欄 */
-:global(.ui .form) > .sidebar-search {
-  margin-top: 10px;
-  margin-right: 5px;
-  color: #8E949B;
-}
-
-:global(.ui .form) > .sidebar-search > :global(.input input) {
-  background: #39404E;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-:global(.ui .form) > .sidebar-search > :global(.input input),
-:global(.ui .form) > .sidebar-search > :global(.input input::placeholder),
-:global(.ui .form) > .sidebar-search > :global(.input input ~ i.icon) {
-  color: #8E949B !important;
-}
-
-:global(.ui .form) > .sidebar-search > :global(.input input ~ i.icon) {
-  opacity: 1;
-}
-
-:global(.ui .form) > .sidebar-search > :global(.input input:focus) {
-  border-color: #36C5D3 !important;
-}
-
-:global(.ui .form) > .sidebar-search > :global(.input input:focus),
-:global(.ui .form) > .sidebar-search > :global(.input input:focus::placeholder),
-:global(.ui .form) > .sidebar-search > :global(.input input:focus ~ i.icon) {
-  color: #D0D1D3 !important;
+  color: #939db1;
+  margin-left: 16px;
 }
 
 /**
@@ -83,10 +52,6 @@
   padding: 0;
   border-bottom: 1px #3d4957 solid;
   font-size: 15px;
-}
-
-.my-sidebar .sidebar-accordion :global(.title:not(:hover)) .item-star {
-  visibility: hidden;
 }
 
 .my-sidebar .sidebar-accordion :global(.title .menu .active.item),
@@ -116,7 +81,10 @@
   color: #939db1;
 }
 
-.my-sidebar .sidebar-accordion :global(.title:hover) :global(.item).sidebar-content {
+.my-sidebar
+  .sidebar-accordion
+  :global(.title:hover)
+  :global(.item).sidebar-content {
   background-color: #36c5d3;
   color: #fff;
   font-size: 15px;
@@ -124,14 +92,27 @@
 
 .my-sidebar .sidebar-accordion :global(.title:not(.ui)).current-located a,
 .my-sidebar .sidebar-accordion :global(.title:hover .ui.menu:hover),
-.my-sidebar .sidebar-accordion :global(.title) :global(.ui.menu).current-located,
-.my-sidebar .sidebar-accordion :global(.title) :global(.ui.menu).current-located.active-item,
-.my-sidebar .sidebar-accordion :global(.title) :global(.ui.menu).current-located :global(.item) {
+.my-sidebar
+  .sidebar-accordion
+  :global(.title)
+  :global(.ui.menu).current-located,
+.my-sidebar
+  .sidebar-accordion
+  :global(.title)
+  :global(.ui.menu).current-located.active-item,
+.my-sidebar
+  .sidebar-accordion
+  :global(.title)
+  :global(.ui.menu).current-located
+  :global(.item) {
   background-color: #36c5d3;
   color: #fff;
 }
 
-.my-sidebar .sidebar-accordion :global(.title:not(.ui) .menu) :global(.item).sidebar-content {
+.my-sidebar
+  .sidebar-accordion
+  :global(.title:not(.ui) .menu)
+  :global(.item).sidebar-content {
   padding: 17px 0px 17px 0px;
   font-size: 15px;
   width: 80%;
@@ -158,7 +139,11 @@
   padding: 0;
 }
 
-.my-sidebar :global(.ui.sidebar.menu) .sidebar-accordion :global(.menu) .inner-item {
+.my-sidebar
+  :global(.ui.sidebar.menu)
+  .sidebar-accordion
+  :global(.menu)
+  .inner-item {
   padding: 12px 0px 13px 0px;
   font-size: 13px;
   width: 110px;
@@ -175,43 +160,13 @@
   color: #fff;
 }
 
-.my-sidebar :global(.ui.sidebar.menu .menu .menu:not(:hover)) .item-star {
-  visibility: hidden;
-}
-
 .my-sidebar :global(.ui.sidebar) .highlight {
   background-color: inherit;
-  color: #FFDF24
+  color: #ffdf24;
 }
 
 .my-sidebar :global(.ui.inverted.pointing.secondary.menu) {
   display: flex;
-}
-
-.my-sidebar :global(.ui.inverted.pointing.secondary.menu),
-.my-sidebar :global(.ui.inverted.pointing.secondary.menu) .sidebar-tab,
-.my-sidebar :global(.ui.inverted.pointing.secondary.menu) :global(.active).sidebar-tab {
-  border: 0;
-  height: 40px;
-}
-
-.my-sidebar :global(.ui.inverted.pointing.secondary.menu) .sidebar-tab {
-  flex: 1;
-  padding: 0;
-  text-align: center;
-  margin: 0;
-  line-height: 40px;
-  padding: 0 5px;
-  box-sizing: border-box;
-}
-
-.my-sidebar :global(.ui.inverted.pointing.secondary.menu) .non-menu.sidebar-tab {
-  display: none;
-}
-
-.my-sidebar :global(.ui.inverted.pointing.secondary.menu) :global(.active).sidebar-tab {
-  border-top: 1px solid #36c5d3;
-  color: #36c5d3 !important;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -219,7 +174,10 @@
     width: 60%;
   }
 
-  .my-sidebar .sidebar-accordion :global(.title:not(.ui) .menu) :global(.item).sidebar-content {
+  .my-sidebar
+    .sidebar-accordion
+    :global(.title:not(.ui) .menu)
+    :global(.item).sidebar-content {
     width: auto;
   }
 }

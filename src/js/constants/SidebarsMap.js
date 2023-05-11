@@ -1,15 +1,15 @@
-import React from 'react';
-import RetentionRateLogin from '../pages/RetentionRateLogin';
+import { lazy } from 'react';
 
 const Sidebars = [
   {
-    path: '/retentionRateLogin',
-    content: '登入留存率',
-    element: <RetentionRateLogin />,
+    path: '/',
+    content: 'Home',
+    element: lazy(() => import('../default/Home')),
   },
   {
-    path: '/',
-    content: 'Log out',
+    path: '/retentionRateLogin',
+    content: '登入留存率',
+    element: lazy(() => import('../pages/RetentionRateLogin')),
   },
 ];
 
