@@ -5,7 +5,6 @@ import {
   Form,
   Grid,
   Header,
-  Icon,
   Image,
   Message,
   Segment,
@@ -40,7 +39,7 @@ const Login = (props) => {
 
     if (password === 'qwe123') {
       Cookies.set('username', username);
-      Cookies.set('logined', 1);
+      Cookies.set('loggedIn', 1);
 
       setTimeout(() => {
         forward('/');
