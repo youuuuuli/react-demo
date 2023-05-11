@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`登入頁 基本 1`] = `
+<div>
+  <div
+    class="ui centered grid login-page"
+  >
+    <div
+      class="column"
+    >
+      <div
+        class="ui right aligned container hide"
+      >
+        <img
+          class="ui inline image lang-icon-cr"
+          src="/lan_tw.png"
+          title="繁體中文"
+        />
+        <img
+          class="ui inline image lang-icon-cr"
+          src="/lan_cn.png"
+          title="简体中文"
+        />
+      </div>
+      <h1
+        class="ui center aligned header"
+      >
+        <div
+          class="content"
+        />
+        <div
+          class="sub header"
+        />
+      </h1>
+      <form
+        class="ui large form"
+      >
+        <div
+          class="ui stacked segment"
+        >
+          <div
+            class="field"
+          >
+            <div
+              class="ui fluid left icon input"
+            >
+              <input
+                type="text"
+                value=""
+              />
+              <i
+                aria-hidden="true"
+                class="user icon"
+              />
+            </div>
+          </div>
+          <div
+            class="field"
+          >
+            <div
+              class="ui fluid left icon input"
+            >
+              <input
+                type="password"
+                value=""
+              />
+              <i
+                aria-hidden="true"
+                class="lock icon"
+              />
+            </div>
+          </div>
+          <button
+            class="ui large fluid button submit"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

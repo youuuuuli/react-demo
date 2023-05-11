@@ -80,7 +80,7 @@ const Login = (props) => {
               fluid
               icon="user"
               iconPosition="left"
-              placeholder={tr('M_TEXT_USER_USERNAME')}
+              label={tr('M_TEXT_USER_USERNAME')}
               value={username}
               onChange={(e, { value }) => setUsername(value)}
             />
@@ -88,7 +88,7 @@ const Login = (props) => {
               fluid
               icon="lock"
               iconPosition="left"
-              placeholder={tr('M_TEXT_PASSWORD')}
+              label={tr('M_TEXT_PASSWORD')}
               type="password"
               value={password}
               onChange={(e, { value }) => setPassword(value)}

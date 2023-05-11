@@ -228,6 +228,10 @@ const RetentionRateLogin = () => {
 
   return (
     <>
+      <div className="page-title">
+        {tr('M_TEXT_RETENTION_RATE_LOGIN')}
+      </div>
+
       <Form className="search-wrap">
         <Form.Group>
           {/* 留存率週期 */}

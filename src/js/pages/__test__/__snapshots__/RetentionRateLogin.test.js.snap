@@ -1,0 +1,561 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`登入留存率 基本 1`] = `
+<DocumentFragment>
+  <div
+    class="page-title"
+  />
+  <form
+    class="ui form search-wrap"
+  >
+    <div
+      class="fields"
+    >
+      <div
+        class="field"
+      >
+        <label>
+          <i
+            aria-hidden="true"
+            class="info circle icon popup-font"
+          />
+        </label>
+        <div
+          class="ui basic buttons os-chart_quickSelect"
+        >
+          <button
+            class="ui button"
+            data-period="day"
+          />
+          <button
+            class="ui active button"
+            data-period="week"
+          />
+          <button
+            class="ui button"
+            data-period="month"
+          />
+        </div>
+      </div>
+      <div
+        class="field"
+      />
+      <div
+        class="field"
+      >
+        <button
+          class="ui blue button"
+        />
+      </div>
+    </div>
+  </form>
+  <div
+    class="ui secondary menu"
+  >
+    <div
+      class="menu right"
+    >
+      <a
+        class="ui button item menu-item"
+        role="button"
+      >
+        <span />
+        <i
+          aria-hidden="true"
+          class="down chevron icon"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    class="down explanation-block"
+  >
+    <div
+      class="ui list"
+      role="list"
+    >
+      <li
+        class="list-item"
+        role="listitem"
+      >
+        <span
+          class="list-item-span"
+        />
+      </li>
+      <li
+        class="list-item"
+        role="listitem"
+      />
+      <li
+        class="list-item"
+        role="listitem"
+      />
+    </div>
+  </div>
+  <div
+    class="ui basic clearing segment"
+  >
+    <div
+      class="ui basic left floated segment"
+    >
+      <div
+        class="ui buttons"
+      >
+        <button
+          class="ui blue button"
+          data-type="percent"
+        />
+        <button
+          class="ui blue basic button"
+          data-type="number"
+        />
+      </div>
+    </div>
+  </div>
+  <table
+    class="ui celled table customized-table"
+  >
+    <thead
+      class=""
+    >
+      <tr
+        class=""
+      >
+        <th
+          class="center aligned"
+        />
+        <th
+          class="center aligned"
+        />
+        <th
+          class="center aligned"
+        />
+        <th
+          class="center aligned"
+        />
+        <th
+          class="center aligned"
+        />
+        <th
+          class="center aligned"
+        />
+        <th
+          class="center aligned"
+        />
+        <th
+          class="center aligned"
+        />
+        <th
+          class="center aligned"
+        />
+        <th
+          class="center aligned"
+        />
+        <th
+          class="center aligned"
+        />
+      </tr>
+    </thead>
+    <tbody
+      class=""
+    >
+      <tr
+        class=""
+      >
+        <td
+          class="center aligned"
+        >
+          2021-10-05 Tuesday
+        </td>
+        <td
+          class="center aligned"
+        >
+          <a
+            class="ui button"
+            data-created-date="2021-10-05"
+            role="button"
+          >
+            1
+          </a>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <span>
+            0.00%
+          </span>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <span>
+            0.00%
+          </span>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <span>
+            0.00%
+          </span>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <span>
+            0.00%
+          </span>
+        </td>
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+      </tr>
+      <tr
+        class=""
+      >
+        <td
+          class="center aligned"
+        >
+          2021-10-06 Wednesday
+        </td>
+        <td
+          class="center aligned"
+        >
+          <a
+            class="ui button"
+            data-created-date="2021-10-06"
+            role="button"
+          >
+            1
+          </a>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <span>
+            0.00%
+          </span>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <span>
+            0.00%
+          </span>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <span>
+            0.00%
+          </span>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <span>
+            0.00%
+          </span>
+        </td>
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+      </tr>
+      <tr
+        class=""
+      >
+        <td
+          class="center aligned"
+        >
+          2021-10-07 Thursday
+        </td>
+        <td
+          class="center aligned"
+        >
+          <a
+            class="ui button"
+            data-created-date="2021-10-07"
+            role="button"
+          >
+            4
+          </a>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <a
+            class="ui button"
+            data-created-date="2021-10-07"
+            data-end-login-at="2021-10-14"
+            data-start-login-at="2021-10-08"
+            role="button"
+          >
+            25.00%
+          </a>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <span>
+            0.00%
+          </span>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <a
+            class="ui button"
+            data-created-date="2021-10-07"
+            data-end-login-at="2021-10-28"
+            data-start-login-at="2021-10-22"
+            role="button"
+          >
+            25.00%
+          </a>
+        </td>
+        <td
+          class="center aligned"
+        >
+          <span>
+            0.00%
+          </span>
+        </td>
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+        <td
+          class="center aligned"
+        />
+      </tr>
+      <tr
+        class=""
+      >
+        <td
+          class="center aligned result-cell"
+        />
+        <td
+          class="center aligned result-cell"
+        >
+          6
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          16.66%
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          0.00%
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          16.66%
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          0.00%
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          --
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          --
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          --
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          --
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          --
+        </td>
+      </tr>
+      <tr
+        class=""
+      >
+        <td
+          class="center aligned result-cell"
+        />
+        <td
+          class="center aligned result-cell"
+        >
+          6
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          16.66%
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          0.00%
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          16.66%
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          0.00%
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          --
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          --
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          --
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          --
+        </td>
+        <td
+          class="center aligned result-cell"
+        >
+          --
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div
+    class="ui fluid right aligned container"
+  >
+    <ul
+      class="rc-pagination"
+      data-testid="pagination"
+      unselectable="unselectable"
+    >
+      <li
+        class="rc-pagination-total-text"
+      />
+      <li
+        aria-disabled="true"
+        class="rc-pagination-disabled rc-pagination-prev"
+        title="上一页"
+      >
+        <a
+          class="rc-pagination-item-link"
+          disabled=""
+        />
+      </li>
+      <li
+        class="rc-pagination-item rc-pagination-item-1 rc-pagination-item-active"
+        tabindex="0"
+        title="1"
+      >
+        <a>
+          1
+        </a>
+      </li>
+      <li
+        aria-disabled="true"
+        class="rc-pagination-disabled rc-pagination-next"
+        title="下一页"
+      >
+        <a
+          class="rc-pagination-item-link"
+          disabled=""
+        />
+      </li>
+      <li
+        class="rc-pagination-options"
+      >
+        <div
+          class="rc-pagination-options-size-changer rc-select rc-select-enabled"
+        >
+          <div
+            aria-autocomplete="list"
+            aria-controls="test-uuid"
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="rc-select-selection
+            rc-select-selection--single"
+            role="combobox"
+            tabindex="0"
+          >
+            <div
+              class="rc-select-selection__rendered"
+            >
+              <div
+                class="rc-select-selection-selected-value"
+                style="display: block; opacity: 1;"
+                title="20 条/页"
+              >
+                20 条/页
+              </div>
+            </div>
+            <span
+              class="rc-select-arrow"
+              style="user-select: none;"
+              unselectable="on"
+            >
+              <i
+                class="rc-select-arrow-icon"
+              />
+            </span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
