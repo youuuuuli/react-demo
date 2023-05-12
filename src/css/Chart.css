@@ -18,7 +18,6 @@
   z-index: 0;
 }
 
-/* 視窗過小時呈現 x 軸 scroll */
 .ui.segments.chart-wrap
   > .segment
   .dimmable.os-chart_kind-chart
@@ -26,7 +25,6 @@
   overflow-x: auto;
 }
 
-/* echarts canvas 最小寬度 */
 .ui.segments.chart-wrap
   > .segment
   .dimmable.os-chart_kind-chart
@@ -50,7 +48,6 @@
   box-shadow: -1px 0 5px 0 rgba(60, 76, 93, 0.2);
 }
 
-/* 第一層圖表類型按鈕 */
 .ui.form.os-chart_inline {
   margin-bottom: 10px;
 }
@@ -66,7 +63,6 @@
   margin-bottom: 0;
 }
 
-/* 讀取/無資料遮罩 */
 .ui.segments.chart-wrap .dimmer.active {
   background: #f9f9f9;
 }
@@ -75,7 +71,6 @@
   color: #333;
 }
 
-/* 右側面板 */
 .ui.segment.os-chart_panel-wrap .ui.grid {
   margin: 0;
   height: 100%;
@@ -92,7 +87,6 @@
   padding-bottom: 1rem;
 }
 
-/* 第一層右側面板 */
 .ui.segment.os-chart_panel-wrap .os-chart_panel-level1,
 .ui.segment.os-chart_panel-wrap .os-chart_panel-all {
   flex: 1;
@@ -175,7 +169,6 @@
   margin-bottom: 0;
 }
 
-/* 第二層右側面板 */
 .ui.segment.os-chart_panel-wrap .os-chart_panel-level2 {
   overflow-y: auto;
   flex: 1;
@@ -190,7 +183,6 @@
   padding: 10px 8px;
 }
 
-/* 單日趨勢走勢 */
 .ui.segment.os-chart_panel-wrap
   .os-chart_panel-level2
   .ui.list
@@ -255,7 +247,6 @@
   font-size: 13px;
 }
 
-/* 第二層常用頁籤彈窗 */
 .ui.modal.modal-favor > .header > span {
   font-size: 12px;
   line-height: 18px;
@@ -288,7 +279,6 @@
   float: right;
 }
 
-/* 處理彈窗內欲排序 */
 .sortableHelper {
   z-index: 1001 !important;
 }
@@ -297,14 +287,12 @@
   z-index: 0;
 }
 
-/* 圓餅圖指標 */
 .os-chart_pie-chart-percentage {
   display: none;
   color: #bdbfc3;
   margin-left: 10px;
 }
 
-/* 單一種類遊戲圓餅圖 */
 .ui.grid > .row > .column.chart-sub-pie-list {
   padding: 0;
   margin-right: -1px;
@@ -343,7 +331,6 @@
   padding: 24px;
 }
 
-/* 圓餅圖指標 */
 @media screen and (max-width: 1680px) {
   .os-chart_pie-chart-percentage {
     display: block;

@@ -120,14 +120,12 @@
   }
 }
 
-/* otp 驗證 */
 @media all and (max-width: 767px) and (orientation: landscape) {
   :global(#root > div).otp {
     height: 100%;
   }
 }
 
-/* otp 初始設定 */
 .login-page.setup .openQrcode {
   display: block;
   margin: 0 auto;
@@ -169,17 +167,11 @@
   }
 }
 
-/**
- * OTP綁定裝置 Step 左邊
- */
 .left-part {
   float: left;
   margin: 22px 0;
 }
 
-/**
- * 臨時驗證碼登入
- */
 :global(.ui.center.aligned.container) .temporary-otp-login {
   border: none;
   background: transparent !important;

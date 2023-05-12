@@ -1,16 +1,10 @@
-@import "basic.css";
-@import "button.css";
-@import "calendar.css";
-@import "table.css";
-@import "modal.css";
-@import "input.css";
-@import "utils.css";
+@import "Calendar.css";
 @import "Pagination.css";
 
 .ui.form .inline.fields.right {
   justify-content: flex-end;
 }
-/*高度100%*/
+
 html,
 body,
 #root {
@@ -20,26 +14,27 @@ body,
   font-family: "Microsoft JhengHei", "Helvetica Neue";
   line-height: 20px;
 }
+
 #root > #pageWrapper,
 #root > #pageWrapper > div {
   height: 100%;
 }
+
 .clearfix::before {
   display: table;
   content: "";
 }
+
 .clearfix::after {
   display: table;
   clear: both;
   content: "";
 }
+
 .clearfix + .ui.basic.segment.clearing {
   margin-top: 0;
 }
-/*******************************
-            inner-page-pusher
-*******************************/
-/*內頁*/
+
 .inner-page-pusher.pusher {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -55,34 +50,37 @@ body,
   transition-duration: 0.5s, 0.5s;
   transition-property: margin-left, -webkit-margin-left;
 }
-/*內頁(窄)*/
+
 .inner-page-pusher.pusher.thin {
   margin-left: 160px;
 }
-/*******************************
-            header
-*******************************/
+
 .page-title,
 .basic-title,
 .content-title {
   font-size: 13px;
   line-height: 40px;
 }
+
 .page-title {
   color: #404040;
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 16px;
 }
+
 .basic-title {
   font-weight: 700;
 }
+
 .content-title {
   margin: 0 5px;
 }
+
 .advanced-title {
   margin-right: 15px;
 }
+
 .sub-header {
   margin: 1em 0;
 }
@@ -90,41 +88,47 @@ body,
 .sub-header span {
   font-weight: 700;
 }
+
 .ui.header > span {
   display: inline-block;
   margin-left: 0.5em;
 }
-/*******************************
-            分頁Menu
-*******************************/
+
 .ui.secondary.pointing.menu {
   border-bottom: 2px solid #e7ecf1;
 }
+
 .ui.secondary.pointing.menu .item:not(.notice) {
   font-weight: bold;
   font-size: 15px;
 }
+
 .ui.secondary.pointing.menu .active.item {
   border-color: #669bdf;
   color: #669bdf;
 }
+
 .ui.secondary.pointing.menu .active.item:hover {
   border-color: #d0d1d3;
   color: #404040;
 }
+
 .ui.secondary.sub.menu .item {
   border: 1px solid #669bdf;
   color: #669bdf;
   background-color: white;
 }
+
 .ui.secondary.sub.menu .item:hover {
   color: white;
   background-color: #669bdf;
 }
+
 .ui.secondary.sub.menu .active.item {
   background-color: #669bdf;
   color: white !important;
 }
+
 .ui.secondary.sub.menu .active.item:hover {
   background-color: #548ed8;
 }
@@ -137,137 +141,36 @@ body,
   margin-bottom: 1rem;
 }
 
-/*******************************
-            Attached
-*******************************/
-.ui.attached.block.header.blue-header {
-  background: #669bdf;
-  color: #fff;
-  border: 1px solid #669bdf;
-}
-/*******************************
-            Language
-*******************************/
 .lang-icon,
 .lang-icon-cr {
   width: 35px;
   padding: 2px;
   border-radius: 50%;
 }
+
 .lang-icon {
   border: 2px solid #4d5768;
 }
+
 .lang-icon-cr {
   border: 1px solid #f5f5f5;
   -webkit-filter: grayscale(100%);
 }
-/*******************************
-            Scroll Bar
-*******************************/
+
 ::-webkit-scrollbar,
 .wide-sidebar::-webkit-scrollbar,
 .inner-page-pusher.pusher::-webkit-scrollbar {
   width: 7px;
 }
+
 .wide-sidebar::-webkit-scrollbar-track,
 .inner-page-pusher.pusher::-webkit-scrollbar-track {
   display: none;
 }
+
 .inner-page-pusher.pusher::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #0000002b;
-}
-/*圖表捲軸*/
-/* width */
-.operation-scroll-wrap::-webkit-scrollbar {
-  width: 5px;
-  height: 10px;
-}
-.group-level-content {
-  overflow-y: auto;
-  max-height: 300px;
-}
-/*******************************
-            檢查工具
-*******************************/
-.ui.attached.segment.execution-log-segment {
-  margin: 20px 0 12px;
-  padding: 0;
-}
-.execution-log-option {
-  height: 40px;
-  background-color: #f5f6fa;
-}
-.execution-inner-group {
-  padding: 0 20px;
-}
-/*******************************
-            各式報表
-*******************************/
-.set-col-block {
-  position: absolute;
-  top: 50px;
-  background: #fff;
-  padding: 10px;
-  z-index: 3;
-  border: 1px solid #fafafc;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
-  column-count: 2;
-}
-.set-col-block::before {
-  position: absolute;
-  content: "";
-  width: 15px;
-  height: 15px;
-  background: #fff;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  z-index: 2;
-  top: -8px;
-  left: 5px;
-  border-top: 1px solid #fafafc;
-  border-left: 1px solid #fafafc;
-  -webkit-box-shadow: -1px -1px 0 0 #e7ecf1;
-  box-shadow: -1px -1px 0 0 #e7ecf1;
-}
-.set-col-block .opCodeButton {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-bottom: 10px;
-  break-inside: avoid;
-}
-/*******************************
-            RWD
-*******************************/
-@media screen and (max-width: 1024px) {
-  .inner-page-pusher.pusher,
-  .inner-page-pusher.pusher.thin {
-    margin-left: 0;
-  }
-  .operation-scroll-wrap {
-    position: relative;
-    overflow-x: scroll;
-    width: 100%;
-  }
-  .operation-chart-wrap {
-    width: 1024px;
-  }
-  .guide-wrap {
-    position: absolute;
-    right: -50px;
-    bottom: 0;
-    z-index: 3;
-    width: 150px;
-    height: 100%;
-    background: linear-gradient(180deg, #fff 60%, #fbfbfb0f 90%);
-    background: -moz-linear-gradient(180deg, #fff 60%, #fbfbfb0f 90%);
-    background: -webkit-linear-gradient(180deg, #fff 60%, #fbfbfb0f 90%);
-    background: -o-linear-gradient(180deg, #fff 60%, #fbfbfb0f 90%);
-  }
-  .guide-wrap.slide-out {
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -284,19 +187,6 @@ body,
   }
 }
 
-@media only screen and (max-width: 467px) {
-  .account-select-form div,
-  input {
-    width: 100% !important;
-  }
-  .ui.form.search-wrap .field {
-    width: 100%;
-  }
-}
-
-/**
- * 功能按鈕
- */
 .ui.segments.actions,
 .ui.segments.actions > .ui.segment,
 .ui.segment.actions {
@@ -309,14 +199,6 @@ body,
   margin-left: 0 !important;
 }
 
-/**
- * 公告內容表格
- */
-.post-content table tbody tr {
-  text-align: left;
-}
-
-/* font-weight */
 .font-bold {
   font-weight: bold !important;
 }
@@ -325,14 +207,12 @@ body,
   font-weight: normal !important;
 }
 
-/* 溢位文字為 "..." */
 .overflow-text {
   width: 120px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-/* 溢位標籤 */
 .overflow-icon {
   max-width: 170px;
 }
@@ -353,173 +233,22 @@ body,
   margin-top: 0;
 }
 
-/* 重複使用 */
 .direct-link {
   cursor: pointer;
 }
 
-/* 麵包屑連結 */
 .ui.breadcrumb > .section:last-child {
   font-size: 16px;
 }
 
-/**
-  * 區塊組合
-  */
-.ui.segment.main-nav-group .ui.left.floated.header,
-.ui.segment.main-nav-group .ui.breadcrumb {
-  line-height: 36px;
-  margin-bottom: 0;
-}
-
-.ui.segment.basic.clearing > .ui.basic.floated.segment {
-  margin: 0;
-}
-
-/* inline radio */
-.ui.radio ~ .ui.radio {
-  margin-left: 1em;
-}
-
-/* inline checkbox */
-.ui.checkbox ~ .ui.checkbox {
-  margin-left: 1em;
-}
-
-/* label 作為 title */
-.ui.basic.label.large {
-  font-size: 14px;
-  border: none;
-}
-
-/* 下拉式選單 description */
 .ui.dropdown .menu > .item > .description.span-disable {
   color: #ed6b75;
 }
 
-/* 無法選擇 */
 .select-disabled {
   user-select: none;
 }
 
-.operation-chart-wrap {
-  margin-bottom: 50px;
-}
-
-.clipboard-text {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* 嵌入iframe */
-.embedded-iframe {
-  position: absolute;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  overflow: hidden;
-  border: none;
-}
-
-/**
- * 使用 mount_tab 組件做 Tab,
- * 內含第二, 第三層頁籤
- * - .scrollbar-container.ps 為 mount_tab 組件外層
- */
-.scrollbar-container.ps + div .ui.secondary.menu .item,
-.scrollbar-container.ps
-  + div
-  .ui.secondary.menu
-  ~ div
-  .ui.secondary.menu
-  .item {
-  font-weight: normal;
-  line-height: 20px;
-  margin: 0 4px;
-}
-
-.scrollbar-container.ps
-  + div
-  .ui.secondary.menu
-  ~ div
-  .ui.secondary.menu
-  .item {
-  border-radius: 18px;
-  border: 1px solid #e8e8e8;
-  line-height: 18px;
-}
-
-.scrollbar-container.ps + div .ui.secondary.menu .active.item,
-.scrollbar-container.ps
-  + div
-  .ui.secondary.menu
-  ~ div
-  .ui.secondary.menu
-  .active.item {
-  background-color: #e8e8e8;
-  font-weight: bold;
-}
-
-.scrollbar-container.ps + div .ui.secondary.menu .item:hover,
-.scrollbar-container.ps
-  + div
-  .ui.secondary.menu
-  ~ div
-  .ui.secondary.menu
-  .item:hover {
-  background-color: #f9f9f9;
-  font-weight: normal;
-}
-
-/* pre 自動換行 */
-.pre-line-feed {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-/* 強制 pre 換行 */
-.space-pre-wrap {
-  white-space: pre-wrap !important;
-}
-
-/******************************
-    LabelIcon - 文字與icon恆對齊   TODO: 這個之後會拿到semantic-ui
-*******************************/
-.os-label_icon {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.os-label_icon div[name="label"] {
-  flex-grow: 1;
-}
-
-.os-label_icon > .icon {
-  height: auto;
-  width: auto;
-  padding-left: 5px;
-}
-
-.hint-block {
-  background: rgba(102, 155, 223, 0.15);
-  border-radius: 5px;
-  margin: 5px 0;
-  padding: 10px;
-}
-
-.hint-block .ui.horizontal.list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.hint-block .ui.horizontal.list > .item {
-  margin-left: 0;
-  flex: 0 1 33.33%;
-}
-
-.down.hint-block {
-  display: none;
+.hide:not(i) {
+  display: none !important;
 }

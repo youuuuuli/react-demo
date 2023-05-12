@@ -1,6 +1,3 @@
-/**
- * 左側選單
- */
 :global(.segment).my-sidebar {
   margin: 0;
   width: 100%;
@@ -24,9 +21,6 @@
   display: none;
 }
 
-/**
- * 使用者姓名+美東時間
- */
 .user-info-wrap {
   padding: 0 5px 20px 14px;
   border-bottom: 1px #3d4957 solid;
@@ -44,9 +38,6 @@
   margin-left: 16px;
 }
 
-/**
- * 選單母項目
- */
 .my-sidebar .sidebar-accordion :global(.title:not(.ui)) {
   box-sizing: border-box;
   padding: 0;
@@ -123,9 +114,6 @@
   font-size: 13px;
 }
 
-/**
- * 選單子項目
- */
 .my-sidebar :global(.ui.sidebar.menu .menu) {
   background: #2b3542;
 }
@@ -188,9 +176,6 @@
   }
 }
 
-/**
- * 左側選單隱藏
- */
 .my-sidebar :global(.ui.sidebar.menu).thin-sidebar {
   display: none;
 }
